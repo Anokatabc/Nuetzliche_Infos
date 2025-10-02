@@ -39,10 +39,10 @@ git remote add origin REPOSITORYLINK
 git branch -M main
 ```
 
-> -M (Move) erzwingt die Änderung, auch wenn Branch "main" schon existiert.
+> -M (Move) erzwingt die Änderung, auch wenn Branch "main" schon existiert.<br>
 > u = setzt Upstream-Verbindung (von lokal auf remote) - dies bleibt von hier an die Default-Verbindung bei Push&Pull
 > origin" = (beliebiger, aber gängiger Name für) Verbindung zu remote
-> main" = Name des aktiven Branches
+> "main" = Name des aktiven Branches
 > `f` oder `--force` wenn man überschreiben möchte
 
 Bei späteren Commits geht einfach nur "git push"
@@ -120,6 +120,7 @@ git restore .
 ```bash
 rmdir /s /q .git
 ```
+
 
 
 
