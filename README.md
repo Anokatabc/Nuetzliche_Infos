@@ -1,4 +1,4 @@
-````markdown
+
 # Übersicht: LaTeX-Textformatierung in Markdown
 
 # Fett und Kursiv
