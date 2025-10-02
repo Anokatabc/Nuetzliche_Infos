@@ -1,7 +1,7 @@
 ````markdown
 # Übersicht: LaTeX-Textformatierung in Markdown
 
-## Fett und Kursiv
+# Fett und Kursiv
 - **Fett:** `\textbf{Text}` → $\textbf{Text}$
 - **Kursiv:** `\textit{Text}` → $\textit{Text}$
 - **Mit \mathbf{}:** `\mathbf{Text}` → $\mathbf{Text}$ (nur Buchstaben, keine Sonderzeichen)
