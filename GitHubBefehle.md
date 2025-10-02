@@ -6,7 +6,8 @@
 ```bash
 git rev-parse --show-toplevel
 ```
-> Ermittelt von einem Kindelement aus (aufwärts) den Ordner, der als Repository markiert ist. 
+> Ermittelt von einem Kindelement aus (aufwärts) den Ordner, der als Repository markiert ist.
+> Das ist der Ordner, in welchem ".git" liegt. Der ist im normalen Explorer standardmäßig versteckt.
 
 #### -- Lokales Repository erstellen (initialisieren) -> erst in Wunschverzeichnis hineinnavigieren --
 ```bash
@@ -28,7 +29,7 @@ git remote add origin REPOSITORYLINK
 
 ### Hochladen und Synchronisieren (add (=Stage) -> commit -> push)
 
-### (einmalig mit dem ersten Push) 
+### Einmalig bei dem ersten Push
 #### -- Aktuellen Branch in "main" umbenennen. 
 ```bash
 git branch -M main
@@ -48,6 +49,7 @@ git push -u origin main
 
 > -> Bei späteren Commits geht einfach nur `git push`
 
+### Üblicher Upload-Workflow
 #### -- Alle Unterordner "stagen" ("ready for commit") --
 ```bash
 git add .
@@ -58,7 +60,7 @@ git add .
 ```bash
 git commit -m "Stand Commit: Projekt erstellt"
 ```
-> Der Commit selbst speichert den aktuellen Projektstand im lokalen Repository (.git-Ordner)
+> Der Commit selbst speichert den aktuellen Projektstand im lokalen Repository (d. h. im .git-Ordner)
 
 > `-m` = message. Angeben welche Veränderungen es seit dem letzten Commit gegeben hat.
 
@@ -66,7 +68,7 @@ git commit -m "Stand Commit: Projekt erstellt"
 ```bash
 git push
 ```
-> Push lädt den Commit auf Remote bzw. GitHub hoch
+> Ein Push lädt den Commit auf Remote bzw. GitHub hoch
 
 ### Repository von Remote (GitHub) auf Local (PC) Herunterladen
 
@@ -111,6 +113,7 @@ rmdir /s /q .git
 > q = ohne Bestätigung
 
 > git = \[Dateiordner]
+
 
 
 
