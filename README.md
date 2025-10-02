@@ -1,10 +1,6 @@
-#### Einige nützliche Befehle und Tipps und Tricks :)
+#### Lokales Repository initialisieren
 
---- test
-
--- test
-
-- test
-test
--- test
-- test
+```bash
+git init
+```
+> Initialisiert ein neues Git-Repository im aktuellen Ordner.
