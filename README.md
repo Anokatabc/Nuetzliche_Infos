@@ -10,7 +10,7 @@
 
  	$\color{yellow}{*"/q = ohne Bestätigung"*}$
 
- 	$\color{yellow}{*.git = \[Dateiordner]*}$
+ 	$\textcolor{yellow}{*.git = \[Dateiordner]*}$
 
 **rmdir /s /q .git**
 
