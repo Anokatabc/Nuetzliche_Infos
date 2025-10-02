@@ -15,7 +15,7 @@ $\small \qquad \text	{/q = ohne Bestätigung}$
 
 $\small \qquad \text	{.git = \[Dateiordner]}$
 
-```git
+```bash
 rmdir /s /q .git
 ```
 
@@ -105,5 +105,6 @@ git status
 ```bash
 git restore .
 ```
+
 
 
