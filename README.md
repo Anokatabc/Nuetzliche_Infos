@@ -76,8 +76,6 @@ $\textbf{\textcolor{red}{Fett und rot}}$
 | \tiny{Text}            | {\tiny Text}                | Text             |
 | \Huge{Text}            | {\Huge Text}                | Text             |
 
-````
-
 
 
 ###### -- Lokales Repository finden (mit cd und dir herumnavigieren)
