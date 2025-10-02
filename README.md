@@ -1,6 +1,83 @@
-```html
-<p style="text-align: center">Test</p>
+````markdown
+# Übersicht: LaTeX-Textformatierung in Markdown
+
+## Fett und Kursiv
+- **Fett:** `\textbf{Text}` → $\textbf{Text}$
+- **Kursiv:** `\textit{Text}` → $\textit{Text}$
+- **Mit \mathbf{}:** `\mathbf{Text}` → $\mathbf{Text}$ (nur Buchstaben, keine Sonderzeichen)
+- **Mit \mathit{}:** `\mathit{Text}` → $\mathit{Text}$
+
+## Unterstreichen
+- `\underline{Text}` → $\underline{Text}$
+
+## Durchstreichen (MathJax only)
+- `\cancel{Text}` → $\cancel{Text}$ (nur mit aktiviertem cancel-Paket)
+
+## Schriftarten
+- **Serifenlos:** `\textsf{Text}` → $\textsf{Text}$
+- **Monospace:** `\texttt{Text}` → $\texttt{Text}$
+- **Roman:** `\textrm{Text}` → $\textrm{Text}$
+- **Small Caps:** `\textsc{Text}` → $\textsc{Text}$
+
+## Schriftgröße
+- `\tiny{Text}` → {\tiny Text}
+- `\scriptsize{Text}` → {\scriptsize Text}
+- `\footnotesize{Text}` → {\footnotesize Text}
+- `\small{Text}` → {\small Text}
+- `\normalsize{Text}` → {\normalsize Text}
+- `\large{Text}` → {\large Text}
+- `\Large{Text}` → {\Large Text}
+- `\LARGE{Text}` → {\LARGE Text}
+- `\huge{Text}` → {\huge Text}
+- `\Huge{Text}` → {\Huge Text}
+
+*(Hinweis: Schriftgrößen funktionieren meist nur in Block-Math, und nicht überall)*
+
+## Farben
+- `\color{red}Text` → {\color{red}Text}
+- `\textcolor{blue}{Text}` → $\textcolor{blue}{Text}$
+- `\colorbox{yellow}{Text}` → $\colorbox{yellow}{Text}$
+
+*(Farben funktionieren nur, wenn das color-Paket unterstützt wird – z.B. KaTeX, MathJax)*
+
+## Sonstiges
+- **Hochgestellt:** `Text^{hoch}` → $Text^{hoch}$
+- **Tiefgestellt:** `Text_{tief}` → $Text_{tief}$
+
+---
+
+## Beispiel für kombinierte Formatierung
+
+```markdown
+$\textbf{\textcolor{red}{Fett und rot}}$
 ```
+
+---
+
+## Wichtige Hinweise
+- **Nur innerhalb von Math-Umgebungen!** (`$...$` oder `$$...$$`)
+- **Nicht alle Befehle werden überall unterstützt.** GitHub und Jupyter verwenden KaTeX/MathJax, die meisten Befehle aus dieser Liste funktionieren dort.
+- **Für normales Markdown außerhalb von Math-Umgebungen** gelten nur die Standard-Formatierungen wie `**fett**`, `_kursiv_`, usw.
+
+---
+
+## Übersicht als Tabelle
+
+| Befehl                 | Beispiel                     | Ergebnis         |
+|------------------------|-----------------------------|------------------|
+| \textbf{Text}          | $\textbf{Text}$             | **Text**         |
+| \textit{Text}          | $\textit{Text}$             | *Text*           |
+| \underline{Text}       | $\underline{Text}$          | _Text_           |
+| \textcolor{red}{Text}  | $\textcolor{red}{Text}$     | Text             |
+| \color{blue}Text       | {\color{blue}Text}          | Text             |
+| \texttt{Text}          | $\texttt{Text}$             | `Text`           |
+| \textsf{Text}          | $\textsf{Text}$             | Text             |
+| \cancel{Text}          | $\cancel{Text}$             | ~~Text~~         |
+| \tiny{Text}            | {\tiny Text}                | Text             |
+| \Huge{Text}            | {\Huge Text}                | Text             |
+
+````
+
 
 
 ###### -- Lokales Repository finden (mit cd und dir herumnavigieren)
