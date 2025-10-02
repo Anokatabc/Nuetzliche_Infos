@@ -1,5 +1,5 @@
 $$
-\color{yellow}
+\color{red}
 \text{Hello World}
 $$
 
