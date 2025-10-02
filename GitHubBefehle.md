@@ -2,9 +2,9 @@
 
 ##### -- Lokales Repository finden (mit cd und dir herumnavigieren) --
 
-```bash
+``bash
 git rev-parse --show-toplevel
-```
+``
 
 
 #### -- Lokales Repository relokalisieren (u. a. löschen) -> erst hineinnavigieren --
@@ -105,6 +105,7 @@ git status
 ```bash
 git restore .
 ```
+
 
 
 
