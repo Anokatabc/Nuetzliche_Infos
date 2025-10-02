@@ -28,13 +28,13 @@ git remote add origin REPOSITORYLINK
 
 ### Hochladen und Synchronisieren (add (=Stage) -> commit -> push)
 
-#### (einmalig mit dem ersten Push) 
-##### -- Aktuellen Branch in "main" umbenennen. 
+### (einmalig mit dem ersten Push) 
+#### -- Aktuellen Branch in "main" umbenennen. 
 ```bash
 git branch -M main
 ```
 > `-M` (Move) erzwingt die Änderung, auch wenn Branch "main" schon existiert.
-##### -- Verbindung zum Remote herstellen 
+#### -- Verbindung zum Remote herstellen 
 ```bash
 git push -u origin main
 ```
@@ -111,6 +111,7 @@ rmdir /s /q .git
 > q = ohne Bestätigung
 
 > git = \[Dateiordner]
+
 
 
 
