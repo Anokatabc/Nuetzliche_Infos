@@ -2,6 +2,7 @@ $$
 \color{red}
 \text{Hello World}
 $$
+$E = MC^2$
 
 
 ###### -- Lokales Repository finden (mit cd und dir herumnavigieren)
