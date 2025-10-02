@@ -8,7 +8,7 @@
 
  	$\color{yellow}{"*/s = subdirectories*"}$
 
- 	$\color{yellow}{*"/q = ohne Bestätigung"*}$
+ 	$\color{yellow}{"/q = ohne Bestätigung"}$
 
  	$\textcolor{yellow}{.git = \[Dateiordner]}$
 
@@ -24,13 +24,13 @@
 
 ##### -- Lokales Repository mit bestehendem R. auf GitHub verbinden.
 
- 	$\color{yellow}{*remote = GitHub, spricht remote repository an.*}$
+ 	$\color{yellow}{remote = GitHub, spricht remote repository an.}$
 
- 	$\color{yellow}{*add = fügt neue Verbindung zu einem lokalen Repository hinzu*}$
+ 	$\color{yellow}{add = fügt neue Verbindung zu einem lokalen Repository hinzu}$
 
- 	$\color{yellow}{*origin = beliebige Benennung der Verbindung, üblicherweise "origin" für erste/normale Verbindung*}$
+ 	$\color{yellow}{origin = beliebige Benennung der Verbindung, üblicherweise "origin" für erste/normale Verbindung}$
 
- 	$\color{yellow}{*Link = da vom lokalen Repository ausgegangen wird (übers Terminal), muss ein Ziel angegeben sein.*}$
+ 	$\color{yellow}{Link = da vom lokalen Repository ausgegangen wird (übers Terminal), muss ein Ziel angegeben sein.}$
 
 **git remote add origin REPOSITORYLINK**
 
@@ -44,9 +44,9 @@
 
 ##### -- Commit
 
- 	$\color{yellow}{*Der Commit selbst speichert den aktuellen Projektstand im lokalen Repository (.git-Ordner)*}$
+ 	$\color{yellow}{Der Commit selbst speichert den aktuellen Projektstand im lokalen Repository (.git-Ordner)}$
 
- 	$\color{yellow}{*-m = Message. Angeben welche Veränderungen es seit dem letzten Commit gegeben hat.*}$
+ 	$\color{yellow}{-m = Message. Angeben welche Veränderungen es seit dem letzten Commit gegeben hat.}$
 
 **git commit -m "Stand Commit: Projekt erstellt"**
 
@@ -54,7 +54,7 @@
 
 ##### -- (einmalig beim ersten Push) aktuellen Branch in "main" umbenennen.
 
- 	$\color{yellow}{*-M erzwingt die Änderung.*}$
+ 	$\color{yellow}{-M erzwingt die Änderung.}$
 
 **git branch -M main**
 
@@ -62,15 +62,15 @@
 
 ##### -- Pushen
 
-	$\color{yellow}{*-u = setzt upstream-Verbindung (von lokal auf remote).*}$
+	$\color{yellow}{-u = setzt upstream-Verbindung (von lokal auf remote).}$
 
-	$\color{yellow}{*"origin" = Verbindung zu remote*}$
+	$\color{yellow}{"origin" = Verbindung zu remote}$
 
-	$\color{yellow}{*"main" = aktiver Branch*}$
+	$\color{yellow}{"main" = aktiver Branch}$
 
-	$\color{yellow}{*-f oder --force wenn man überschreiben möchte*}$
+	$\color{yellow}{-f oder --force wenn man überschreiben möchte}$
 
-	$\color{yellow}{*-Bei späteren Commits geht einfach nur "git push"*}$
+	$\color{yellow}{-Bei späteren Commits geht einfach nur "git push"}$
 
 **git push -u origin main**
 
