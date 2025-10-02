@@ -1,8 +1,4 @@
-$$
-\color{red}
-\text{Hello World}
-$$
-$\color{red}E = MC^2$
+$\color{red}\text{E = MC^2}$
 
 
 ###### -- Lokales Repository finden (mit cd und dir herumnavigieren)
