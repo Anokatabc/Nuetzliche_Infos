@@ -58,7 +58,7 @@ git commit -m "Stand Commit: Projekt erstellt"
 ```
 > Der Commit selbst speichert den aktuellen Projektstand im lokalen Repository (.git-Ordner)
 
-> -m = message. Angeben welche Veränderungen es seit dem letzten Commit gegeben hat.
+> `-m` = message. Angeben welche Veränderungen es seit dem letzten Commit gegeben hat.
 
 #### -- Pushen --
 ```bash
@@ -69,10 +69,11 @@ git push
 ### Repository von Remote (GitHub) auf Local (PC) Herunterladen
 
 #### -- (Wenn nicht lokal vorhanden) Repository von GitHub herunterladen und lokal erstellen -> ins Wunschverzeichnis hineinnavigieren
-> "clone" erstellt ein lokales Repository nach dem Vorbild des Remote
 ```bash
 git clone REPOSITORYLINK
 ```
+> `clone` erstellt ein lokales Repository nach dem Vorbild des Remote
+
 #### -- (Wenn lokal vorhanden) Repository von GitHub mit lokalem Repository synchronisieren (downstream)
 > Sofern noch kein Initial Commit stattgefunden hat, 
 
@@ -82,57 +83,29 @@ git clone REPOSITORYLINK
 ### Verwaltungsbefehle
 
 #### -- Änderungen seit letztem Commit prüfen --
-
 ```bash
 git diff
 ```
-
+> Listet im Terminal alle Änderungen auf, die seit letztem Commit stattgefunden haben.
 
 #### -- Sehen was aktuell gestaged ist --
-
 ```bash
 git status
 ```
-
+> Listet aktuelle Inhalte im Stage auf.
 
 #### -- Von .git Ordner wiederherstellen (Stand: Letzter Commit) --
-
 ```bash
 git restore .
 ```
+> Stellt Ordnerstruktur aus dem gespeicherten Repository in .git wiederher. Dazu muss kein lokales Repository bestehen - es wird nur der Ordner benötigt.
 
 #### -- Lokales Repository (unter Windows) löschen -> erst hineinnavigieren --
-
+```bash
+rmdir /s /q .git
+```
 > s = subdirectories
 
 > q = ohne Bestätigung
 
 > git = \[Dateiordner]
-
-```bash
-rmdir /s /q .git
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
