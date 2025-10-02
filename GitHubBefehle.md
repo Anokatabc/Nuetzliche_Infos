@@ -13,7 +13,7 @@ git rev-parse --show-toplevel
 git init
 ```
 > Initialisiert (erstellt) ein lokales Repository im angegebenen Verzeichnis.
-> 
+
 #### -- Lokales Repository mit bestehendem Repository auf GitHub verbinden (nicht nötig nach `clone`) --
 ```bash
 git remote add origin REPOSITORYLINK
@@ -112,6 +112,7 @@ git restore .
 ```bash
 rmdir /s /q .git
 ```
+
 
 
 
