@@ -18,7 +18,7 @@
 
 ##### -- Lokales Repository erstellen (initialisieren) -> erst hineinnavigieren
 
-$\color{red}\{**git init**}$
+$\color{red}{**git init**}$
 $\color{red}{Test}$
 
 
