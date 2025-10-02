@@ -1,6 +1,6 @@
 ## GitHub-Befehle (Übersicht)
 
-### Navigation und Erstellung
+### Navigation und Erstellung/Einrichtung
 
 ##### -- Lokales Repository finden (mit cd und dir herumnavigieren) --
 
@@ -9,27 +9,15 @@ git rev-parse --show-toplevel
 ```
 
 
-#### -- Lokales Repository löschen -> erst hineinnavigieren --
 
-$\small \qquad \text	{/s = subdirectories}$
-
-$\small \qquad \text	{/q = ohne Bestätigung}$
-
-$\small \qquad \text	{.git = \[Dateiordner]}$
-
-```bash
-rmdir /s /q .git
-```
-
-
-#### -- Lokales Repository erstellen (initialisieren) -> erst hineinnavigieren --
+#### -- Lokales Repository erstellen (initialisieren) -> erst in Wunschverzeichnis hineinnavigieren --
 
 ```bash
 git init
 ```
 
 
-#### -- Lokales Repository mit bestehendem R. auf GitHub verbinden. --
+#### -- Lokales Repository mit bestehendem Repository auf GitHub verbinden. --
 
 $\small \qquad \text	{remote = GitHub, spricht remote repository an.}$
 
@@ -44,7 +32,29 @@ git remote add origin REPOSITORYLINK
 ```
 
 
-### Hochladen und Synchronisieren (Stage -> Commit -> Push)
+### Hochladen und Synchronisieren (add (=Stage) -> commit -> push)
+
+#### -- (einmalig vor dem ersten Push) aktuellen Branch in "main" umbenennen. --
+
+$\small \qquad \text	{-M (Move) erzwingt die Änderung, auch wenn Branch "main" schon existiert.}$
+
+```bash
+git branch -M main
+```
+
+$\small \qquad \text {-u = setzt Upstream-Verbindung (von lokal auf remote) - dies bleibt von hier an die Default-Verbindung bei Push&Pull}$
+
+$\small \qquad \text {"origin" = (beliebiger, aber gängiger Name für) Verbindung zu remote}$
+
+$\small \qquad \text {"main" = Name des aktiven Branches}$
+ 
+$\small \qquad \text {`-f` oder `--force` wenn man überschreiben möchte}$
+
+$\small \qquad \text {-Bei späteren Commits geht einfach nur "git push"}$
+
+```bash
+git push -u origin main
+```
 
 #### -- Alle Unterordner "stagen" ("ready for commit") --
 
@@ -63,32 +73,24 @@ $\small \qquad \text	{-m = Message. Angeben welche Veränderungen es seit dem le
 git commit -m "Stand Commit: Projekt erstellt"
 ```
 
-
-#### -- (einmalig beim ersten Push) aktuellen Branch in "main" umbenennen. --
-
-$\small \qquad \text	{-M erzwingt die Änderung.}$
-
-```bash
-git branch -M main
-```
-
-
 #### -- Pushen --
 
-$\small \qquad \text {-u = setzt upstream-Verbindung (von lokal auf remote).}$
 
-$\small \qquad \text {"origin" = Verbindung zu remote}$
 
-$\small \qquad \text {"main" = aktiver Branch}$
- 
-$\small \qquad \text {-f oder --force wenn man überschreiben möchte}$
 
-$\small \qquad \text {-Bei späteren Commits geht einfach nur "git push"}$
 
+### Repository von Remote (GitHub) auf Local (PC) Herunterladen
+
+#### -- (Wenn nicht lokal vorhanden) Repository von GitHub herunterladen und lokal erstellen -> ins Wunschverzeichnis hineinnavigieren
+$\small \qquad \text {clone erstellt ein lokales Repository nach dem Vorbild des Remote}$
 ```bash
-git push -u origin main
+git clone REPOSITORYLINK
 ```
+#### -- (Wenn lokal vorhanden) Repository von GitHub mit lokalem Repository synchronisieren (downstream)
+$\small \qquad \text {Sofern noch kein}$
 
+#### -- 
+#### -- 
 
 ### Verwaltungsbefehle
 
@@ -112,6 +114,17 @@ git status
 git restore .
 ```
 
+#### -- Lokales Repository (unter Windows) löschen -> erst hineinnavigieren --
+
+$\small \qquad \text	{/s = subdirectories}$
+
+$\small \qquad \text	{/q = ohne Bestätigung}$
+
+$\small \qquad \text	{.git = \[Dateiordner]}$
+
+```bash
+rmdir /s /q .git
+```
 
 
 
