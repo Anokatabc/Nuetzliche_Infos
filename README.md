@@ -12,7 +12,7 @@
 
  		*.git = \[Dateiordner]*
 
-<span style="font-size=large">**rmdir /s /q .git**</span>
+<span style="font-size=25px">**rmdir /s /q .git**</span>
 
 
 
