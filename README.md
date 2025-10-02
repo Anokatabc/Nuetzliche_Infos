@@ -1,10 +1,10 @@
-###### -- Lokales Repository finden (mit cd und dir herumnavigieren)
+##### -- Lokales Repository finden (mit cd und dir herumnavigieren)
 
 $\color{yellow}\textbf{git rev-parse --show-toplevel}$
 
 
 
-##### -- Lokales Repository relokalisieren (u. a. löschen) -> erst hineinnavigieren
+#### -- Lokales Repository relokalisieren (u. a. löschen) -> erst hineinnavigieren
 
 $\small	/s = subdirectories$
 
@@ -16,13 +16,13 @@ $\color{yellow}\textbf{rmdir /s /q .git}$
 
 
 
-##### -- Lokales Repository erstellen (initialisieren) -> erst hineinnavigieren
+#### -- Lokales Repository erstellen (initialisieren) -> erst hineinnavigieren
 
 $\color{yellow}\textbf{git init}$
 
 
 
-##### -- Lokales Repository mit bestehendem R. auf GitHub verbinden.
+#### -- Lokales Repository mit bestehendem R. auf GitHub verbinden.
 
 $\small	remote = GitHub, spricht remote repository an.$
 
@@ -36,13 +36,13 @@ $\color{yellow}\textbf{git remote add origin REPOSITORYLINK}$
 
 
 
-##### -- Alle Unterordner "stagen" ("ready for commit")
+#### -- Alle Unterordner "stagen" ("ready for commit")
 
 $\color{yellow}\textbf{git add .}$
 
 
 
-##### -- Commit
+#### -- Commit
 
 $\small	Der Commit selbst speichert den aktuellen Projektstand im lokalen Repository (.git-Ordner)$
 
@@ -52,7 +52,7 @@ $\color{yellow}\textbf{git commit -m "Stand Commit: Projekt erstellt"}$
 
 
 
-##### -- (einmalig beim ersten Push) aktuellen Branch in "main" umbenennen.
+#### -- (einmalig beim ersten Push) aktuellen Branch in "main" umbenennen.
 
 $\small	-M erzwingt die Änderung.$
 
@@ -60,7 +60,7 @@ $\color{yellow}\textbf{git branch -M main}$
 
 
 
-##### -- Pushen
+#### -- Pushen
 
 	$\tiny-u = setzt upstream-Verbindung (von lokal auf remote).$
 
@@ -76,19 +76,19 @@ $\color{yellow}\textbf{git push -u origin main}$
 
 
 
-##### -- Änderungen seit letztem Commit prüfen
+#### -- Änderungen seit letztem Commit prüfen
 
 $\color{yellow}\textbf{git diff}$
 
 
 
-##### -- Sehen was aktuell gestaged ist
+#### -- Sehen was aktuell gestaged ist
 
 $\color{yellow}\textbf{git status}$
 
 
 
-##### -- Von .git Ordner wiederherstellen (Stand: Letzter Commit)
+#### -- Von .git Ordner wiederherstellen (Stand: Letzter Commit)
 
 $\color{yellow}\textbf{git restore .}$
 
