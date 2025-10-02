@@ -1,3 +1,13 @@
+\documentclass{article}
+\usepackage{xcolor}
+\definecolor{shadecolor}{RGB}{150,150,150}
+\begin{document}
+\noindent\colorbox{shadecolor}
+{\parbox{\dimexpr\textwidth-2\fboxsep\relax}{\textsc{Extra Curricular Achievements}}}
+
+\end{document}
+
+
 ###### -- Lokales Repository finden (mit cd und dir herumnavigieren)
 
 **git rev-parse --show-toplevel**
