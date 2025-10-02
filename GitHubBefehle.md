@@ -12,7 +12,7 @@ git rev-parse --show-toplevel
 ```bash
 git init
 ```
-> Initialisiert (erstellt) ein lokales Repository im angegebenen Verzeichnis.
+> Initialisiert (erstellt) ein lokales Repository im aktuellen Verzeichnis. Alternativ lässt sich auch ein bestimmtes Verzeichnis hinter `init` angeben.
 
 #### -- Lokales Repository mit bestehendem Repository auf GitHub verbinden (nicht nötig nach `clone`) --
 ```bash
@@ -20,11 +20,11 @@ git remote add origin REPOSITORYLINK
 ```
 > `remote` = (hier) GitHub, spricht remote Repository an.
 
-> `add` = Fügt neue Verbindung zu einem lokalen Repository hinzu
+> `add` = Fügt neue Verbindung zu einem lokalen Repository hinzu.
 
-> `origin` = Beliebige Benennung der Verbindung, üblicherweise "origin" für erste/normale Verbindung
+> `origin` = Beliebige Benennung der Verbindung, üblicherweise "origin" für erste/normale Verbindung.
 
-> Ziel-Link = Da anfänglich nur vom lokalen Repository ausgegangen wird, muss ein Ziel angegeben werden
+> Ziel-Link = Da anfänglich nur vom lokalen Repository ausgegangen wird, muss ein Ziel angegeben werden.
 
 ### Hochladen und Synchronisieren (add (=Stage) -> commit -> push)
 
@@ -109,3 +109,4 @@ rmdir /s /q .git
 > q = ohne Bestätigung
 
 > git = \[Dateiordner]
+
