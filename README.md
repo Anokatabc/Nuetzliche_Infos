@@ -6,9 +6,9 @@
 
 ##### -- Lokales Repository relokalisieren (u. a. löschen) -> erst hineinnavigieren
 
- 	$\color{yellow}{*/s = subdirectories*}$
+ 	$\color{yellow}{"*/s = subdirectories*"}$
 
- 	$\color{yellow}{*/q = ohne Bestätigung*}$
+ 	$\color{yellow}{*"/q = ohne Bestätigung"*}$
 
  	$\color{yellow}{*.git = \[Dateiordner]*}$
 
