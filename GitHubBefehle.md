@@ -51,7 +51,7 @@ git push -u origin main
 git add .
 ```
 > Punkt `.` ist Wildcard für alle Unterordner. Alternativ lassen sich auch spezifische Ordnerpfade angeben.
-<br>
+
 #### -- Commit --
 ```bash
 git commit -m "Stand Commit: Projekt erstellt"
@@ -112,6 +112,7 @@ git restore .
 ```bash
 rmdir /s /q .git
 ```
+
 
 
 
