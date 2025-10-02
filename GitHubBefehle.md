@@ -33,11 +33,11 @@ git remote add origin REPOSITORYLINK
 
 ### Hochladen und Synchronisieren (add (=Stage) -> commit -> push)
 
-#### -- (einmalig vor dem ersten Push) aktuellen Branch in "main" umbenennen. --
+#### -- (einmalig mit dem ersten Push) aktuellen Branch in "main" umbenennen. --
 
-```bash
+**```bash
 git branch -M main
-```
+```**
 
 > -M (Move) erzwingt die Änderung, auch wenn Branch "main" schon existiert.<br>
 
@@ -49,7 +49,7 @@ git branch -M main
 
 > `f` oder `--force` wenn man überschreiben möchte<br>
 
-> **Bei späteren Commits geht einfach nur `git push`**
+> Bei späteren Commits geht einfach nur `git push`
 
 ```bash
 git push -u origin main
@@ -124,6 +124,7 @@ git restore .
 ```bash
 rmdir /s /q .git
 ```
+
 
 
 
