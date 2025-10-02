@@ -2,7 +2,7 @@
 
 ##### -- Lokales Repository finden (mit cd und dir herumnavigieren) --
 
-#### ```bash
+```bash
 git rev-parse --show-toplevel
 ```
 
@@ -15,14 +15,14 @@ $\small \qquad \text	{/q = ohne Bestätigung}$
 
 $\small \qquad \text	{.git = \[Dateiordner]}$
 
-#### ```bash
+```bash
 rmdir /s /q .git
 ```
 
 
 #### -- Lokales Repository erstellen (initialisieren) -> erst hineinnavigieren --
 
-#### ```bash
+```bash
 git init
 ```
 
@@ -37,14 +37,14 @@ $\small \qquad \text	{origin = beliebige Benennung der Verbindung, üblicherweis
 
 $\small \qquad \text	{Link = da vom lokalen Repository ausgegangen wird (übers Terminal), muss ein Ziel angegeben sein.}$
 
-#### ```bash
+```bash
 git remote add origin REPOSITORYLINK
 ```
 
 
 #### -- Alle Unterordner "stagen" ("ready for commit") --
 
-#### ```bash
+```bash
 git add .
 ```
 
@@ -55,7 +55,7 @@ $\small \qquad \text	{Der Commit selbst speichert den aktuellen Projektstand im 
 
 $\small \qquad \text	{-m = Message. Angeben welche Veränderungen es seit dem letzten Commit gegeben hat.}$
 
-#### ```bash
+```bash
 git commit -m "Stand Commit: Projekt erstellt"
 ```
 
@@ -64,7 +64,7 @@ git commit -m "Stand Commit: Projekt erstellt"
 
 $\small \qquad \text	{-M erzwingt die Änderung.}$
 
-#### ```bash
+```bash
 git branch -M main
 ```
 
@@ -81,28 +81,28 @@ $\small \qquad \text {-f oder --force wenn man überschreiben möchte}$
 
 $\small \qquad \text {-Bei späteren Commits geht einfach nur "git push"}$
 
-#### ```bash
+```bash
 git push -u origin main
 ```
 
 
 #### -- Änderungen seit letztem Commit prüfen --
 
-#### ```bash
+```bash
 git diff
 ```
 
 
 #### -- Sehen was aktuell gestaged ist --
 
-#### ```bash
+```bash
 git status
 ```
 
 
 #### -- Von .git Ordner wiederherstellen (Stand: Letzter Commit) --
 
-#### ```bash
+```bash
 git restore .
 ```
 
