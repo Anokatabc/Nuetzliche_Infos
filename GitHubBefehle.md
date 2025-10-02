@@ -14,17 +14,17 @@ git init
 ```
 > Initialisiert (erstellt) ein lokales Repository im angegebenen Verzeichnis.
 > 
-#### -- Lokales Repository mit bestehendem Repository auf GitHub verbinden. (Nicht nötig nach `clone`) --
+#### -- Lokales Repository mit bestehendem Repository auf GitHub verbinden (nicht nötig nach `clone`) --
 ```bash
 git remote add origin REPOSITORYLINK
 ```
-> remote = (hier) GitHub, spricht remote Repository an.
+> `remote` = (hier) GitHub, spricht remote Repository an.
 
-> add = Fügt neue Verbindung zu einem lokalen Repository hinzu
+> `add` = Fügt neue Verbindung zu einem lokalen Repository hinzu
 
-> origin = Beliebige Benennung der Verbindung, üblicherweise "origin" für erste/normale Verbindung
+> `origin` = Beliebige Benennung der Verbindung, üblicherweise "origin" für erste/normale Verbindung
 
-> Link = Da anfänglich nur vom lokalen Repository ausgegangen wird, muss ein Ziel angegeben werden
+> Ziel-Link = Da anfänglich nur vom lokalen Repository ausgegangen wird, muss ein Ziel angegeben werden
 
 ### Hochladen und Synchronisieren (add (=Stage) -> commit -> push)
 
@@ -32,28 +32,25 @@ git remote add origin REPOSITORYLINK
 ```bash
 git branch -M main
 ```
-> -M (Move) erzwingt die Änderung, auch wenn Branch "main" schon existiert.<br>
+> `-M` (Move) erzwingt die Änderung, auch wenn Branch "main" schon existiert.
 ```bash
 git push -u origin main
 ```
-> `-u` = setzt Upstream-Verbindung (von local auf remote) - dies bleibt von hier an die Default-Verbindung bei Push&Pull<br>
+> `-u` = setzt Upstream-Verbindung (von local auf remote) - dies bleibt von hier an die Default-Verbindung bei Push&Pull
 
-> `origin` = (beliebiger, aber gängiger Name für) Verbindung zu remote<br>
+> `origin` = (beliebiger, aber gängiger Name für) Verbindung zu remote
 
-> `main` = Name des aktiven Branches<br>
+> `main` = Name des aktiven Branches
 
-> `f` oder `--force` wenn man überschreiben möchte<br>
+> `f` oder `--force` wenn man überschreiben möchte
 
-> Bei späteren Commits geht einfach nur `git push`
-
-
+> -> Bei späteren Commits geht einfach nur `git push`
 
 #### -- Alle Unterordner "stagen" ("ready for commit") --
-
 ```bash
 git add .
 ```
-
+> Punkt `.` ist Wildcard für alle Unterordner. Alternativ lassen sich auch spezifische Ordnerpfade angeben.
 #### -- Commit --
 ```bash
 git commit -m "Stand Commit: Projekt erstellt"
@@ -114,6 +111,7 @@ git restore .
 ```bash
 rmdir /s /q .git
 ```
+
 
 
 
