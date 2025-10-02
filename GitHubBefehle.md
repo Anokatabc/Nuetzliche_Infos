@@ -20,10 +20,13 @@ git init
 git remote add origin REPOSITORYLINK
 ```
 
-> remote = GitHub, spricht remote repository an.<br>
-> add = fügt neue Verbindung zu einem lokalen Repository hinzu<br>
-> origin = beliebige Benennung der Verbindung, üblicherweise "origin" für erste/normale Verbindung<br>
-> Link = da vom lokalen Repository ausgegangen wird (übers Terminal), muss ein Ziel angegeben sein<br>
+> remote = GitHub, spricht remote repository an.
+
+> add = fügt neue Verbindung zu einem lokalen Repository hinzu
+
+> origin = beliebige Benennung der Verbindung, üblicherweise "origin" für erste/normale Verbindung
+
+> Link = da vom lokalen Repository ausgegangen wird (übers Terminal), muss ein Ziel angegeben sein
 
 
 
@@ -37,10 +40,15 @@ git branch -M main
 ```
 
 > -M (Move) erzwingt die Änderung, auch wenn Branch "main" schon existiert.<br>
+
 > u = setzt Upstream-Verbindung (von lokal auf remote) - dies bleibt von hier an die Default-Verbindung bei Push&Pull<br>
+
 > origin" = (beliebiger, aber gängiger Name für) Verbindung zu remote<br>
+
 > "main" = Name des aktiven Branches<br>
+
 > `f` oder `--force` wenn man überschreiben möchte<br>
+
 > **Bei späteren Commits geht einfach nur `git push`**
 
 ```bash
@@ -116,6 +124,7 @@ git restore .
 ```bash
 rmdir /s /q .git
 ```
+
 
 
 
