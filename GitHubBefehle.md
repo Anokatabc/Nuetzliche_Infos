@@ -42,11 +42,11 @@ M (Move) erzwingt die Änderung, auch wenn Branch "main" schon existiert.
 git branch -M main
 ```
 
-u = setzt Upstream-Verbindung (von lokal auf remote) - dies bleibt von hier an die Default-Verbindung bei Push&Pull
+> u = setzt Upstream-Verbindung (von lokal auf remote) - dies bleibt von hier an die Default-Verbindung bei Push&Pull
 
-origin" = (beliebiger, aber gängiger Name für) Verbindung zu remote
+> origin" = (beliebiger, aber gängiger Name für) Verbindung zu remote
 
-main" = Name des aktiven Branches
+> main" = Name des aktiven Branches
  
 f` oder `--force` wenn man überschreiben möchte
 
@@ -67,7 +67,7 @@ git add .
 
 Der Commit selbst speichert den aktuellen Projektstand im lokalen Repository (.git-Ordner)
 
-m = Message. Angeben welche Veränderungen es seit dem letzten Commit gegeben hat.
+> m = Message. Angeben welche Veränderungen es seit dem letzten Commit gegeben hat.
 
 ```bash
 git commit -m "Stand Commit: Projekt erstellt"
@@ -116,16 +116,15 @@ git restore .
 
 #### -- Lokales Repository (unter Windows) löschen -> erst hineinnavigieren --
 
-s = subdirectories
+> s = subdirectories
 
-q = ohne Bestätigung
+> q = ohne Bestätigung
 
-git = \[Dateiordner]
+> git = \[Dateiordner]
 
 ```bash
 rmdir /s /q .git
 ```
-
 
 
 
