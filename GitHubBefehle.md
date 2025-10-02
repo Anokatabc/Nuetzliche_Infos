@@ -6,7 +6,7 @@
 ```bash
 git rev-parse --show-toplevel
 ```
-> Ermittelt von einem Kindelement aus (aufwärts) den Ordner, der als Repository markiert ist.
+> Ermittelt von einem Kindelement aus (aufwärts) den Ordner, der als Repository markiert ist.<br>
 > Das ist der Ordner, in welchem ".git" liegt. Der ist im normalen Explorer standardmäßig versteckt.
 
 #### -- Lokales Repository erstellen (initialisieren) -> erst in Wunschverzeichnis hineinnavigieren --
@@ -113,6 +113,7 @@ rmdir /s /q .git
 > q = ohne Bestätigung
 
 > git = \[Dateiordner]
+
 
 
 
