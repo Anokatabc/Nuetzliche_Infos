@@ -19,13 +19,13 @@ git init
 
 #### -- Lokales Repository mit bestehendem Repository auf GitHub verbinden. --
 
-remote = GitHub, spricht remote repository an.
+> remote = GitHub, spricht remote repository an.
 
-add = fügt neue Verbindung zu einem lokalen Repository hinzu
+> add = fügt neue Verbindung zu einem lokalen Repository hinzu
 
-origin = beliebige Benennung der Verbindung, üblicherweise "origin" für erste/normale Verbindung
+> origin = beliebige Benennung der Verbindung, üblicherweise "origin" für erste/normale Verbindung
 
-Link = da vom lokalen Repository ausgegangen wird (übers Terminal), muss ein Ziel angegeben sein.
+> Link = da vom lokalen Repository ausgegangen wird (übers Terminal), muss ein Ziel angegeben sein.
 
 ```bash
 git remote add origin REPOSITORYLINK
@@ -125,6 +125,7 @@ git = \[Dateiordner]
 ```bash
 rmdir /s /q .git
 ```
+
 
 
 
