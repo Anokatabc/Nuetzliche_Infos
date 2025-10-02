@@ -6,11 +6,11 @@
 
 ##### -- Lokales Repository relokalisieren (u. a. löschen) -> erst hineinnavigieren
 
- 		*/s = subdirectories*
+ 		$\textsc{*/s = subdirectories*}$
 
- 		*/q = ohne Bestätigung*
+ 		$\textsc{*/q = ohne Bestätigung*}$
 
- 		*.git = \[Dateiordner]*
+ 		$\textsc{*.git = \[Dateiordner]*}$
 
 <mark>**rmdir /s /q .git**</mark>
 
@@ -19,7 +19,7 @@
 ##### -- Lokales Repository erstellen (initialisieren) -> erst hineinnavigieren
 
 $\color{red}\Huge{git init}$
-$\textsc{test}$
+
 
 
 
