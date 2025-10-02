@@ -2,8 +2,9 @@
 
 ##### -- Lokales Repository finden (mit cd und dir herumnavigieren) --
 
-#### $\color{yellow}\textbf{git rev-parse --show-toplevel}$
-
+#### ```bash
+git rev-parse --show-toplevel
+```
 
 
 #### -- Lokales Repository relokalisieren (u. a. löschen) -> erst hineinnavigieren --
@@ -14,14 +15,16 @@ $\small \qquad \text	{/q = ohne Bestätigung}$
 
 $\small \qquad \text	{.git = \[Dateiordner]}$
 
-#### $\color{yellow}\textbf{rmdir /s /q .git}$
-
+#### ```bash
+rmdir /s /q .git
+```
 
 
 #### -- Lokales Repository erstellen (initialisieren) -> erst hineinnavigieren --
 
-#### $\color{yellow}\textbf{git init}$
-
+#### ```bash
+git init
+```
 
 
 #### -- Lokales Repository mit bestehendem R. auf GitHub verbinden. --
@@ -34,14 +37,16 @@ $\small \qquad \text	{origin = beliebige Benennung der Verbindung, üblicherweis
 
 $\small \qquad \text	{Link = da vom lokalen Repository ausgegangen wird (übers Terminal), muss ein Ziel angegeben sein.}$
 
-#### $\color{yellow}\textbf{git remote add origin REPOSITORYLINK}$
-
+#### ```bash
+git remote add origin REPOSITORYLINK
+```
 
 
 #### -- Alle Unterordner "stagen" ("ready for commit") --
 
-#### $\color{yellow}\textbf{git add .}$
-
+#### ```bash
+git add .
+```
 
 
 #### -- Commit --
@@ -50,16 +55,18 @@ $\small \qquad \text	{Der Commit selbst speichert den aktuellen Projektstand im 
 
 $\small \qquad \text	{-m = Message. Angeben welche Veränderungen es seit dem letzten Commit gegeben hat.}$
 
-#### $\color{yellow}\textbf{git commit -m "Stand Commit: Projekt erstellt"}$
-
+#### ```bash
+git commit -m "Stand Commit: Projekt erstellt"
+```
 
 
 #### -- (einmalig beim ersten Push) aktuellen Branch in "main" umbenennen. --
 
 $\small \qquad \text	{-M erzwingt die Änderung.}$
 
-#### $\color{yellow}\textbf{git branch -M main}$
-
+#### ```bash
+git branch -M main
+```
 
 
 #### -- Pushen --
@@ -74,23 +81,28 @@ $\small \qquad \text {-f oder --force wenn man überschreiben möchte}$
 
 $\small \qquad \text {-Bei späteren Commits geht einfach nur "git push"}$
 
-#### $\color{yellow}\textbf{git push -u origin main}$
-
+#### ```bash
+git push -u origin main
+```
 
 
 #### -- Änderungen seit letztem Commit prüfen --
 
-#### $\color{yellow}\textbf{git diff}$
-
+#### ```bash
+git diff
+```
 
 
 #### -- Sehen was aktuell gestaged ist --
 
-#### $\color{yellow}\textbf{git status}$
-
+#### ```bash
+git status
+```
 
 
 #### -- Von .git Ordner wiederherstellen (Stand: Letzter Commit) --
 
-#### $\color{yellow}\textbf{git restore .}$
+#### ```bash
+git restore .
+```
 
