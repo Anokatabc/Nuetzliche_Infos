@@ -6,7 +6,7 @@
 
 ##### -- Lokales Repository relokalisieren (u. a. löschen) -> erst hineinnavigieren
 
- 		$\textsc{\textbf{/s = subdirectories}}$
+ 		$\textsc{*/s = subdirectories*}}$
 
  		$\textsc{*/q = ohne Bestätigung*}$
 
