@@ -8,11 +8,11 @@ $\color{yellow}\textbf{git rev-parse --show-toplevel}$
 
 #### -- Lokales Repository relokalisieren (u. a. löschen) -> erst hineinnavigieren
 
-$\small	{/s = subdirectories}$
+$\small	/s = subdirectories$
 
-$\small	{/q = ohne Bestätigung}$
+$\small	/q = ohne Bestätigung$
 
-$\small	{.git = \[Dateiordner]}$
+$\small	.git = \[Dateiordner]$
 
 $\color{yellow}\textbf{rmdir /s /q .git}$
 
@@ -26,13 +26,13 @@ $\color{yellow}\textbf{git init}$
 
 #### -- Lokales Repository mit bestehendem R. auf GitHub verbinden.
 
-$\small	{remote = GitHub, spricht remote repository an.}$
+$\small	remote = GitHub, spricht remote repository an.$
 
-$\small	{add = fügt neue Verbindung zu einem lokalen Repository hinzu}$
+$\small	add = fügt neue Verbindung zu einem lokalen Repository hinzu$
 
-$\small	{origin = beliebige Benennung der Verbindung, üblicherweise "origin" für erste/normale Verbindung}$
+$\small	origin = beliebige Benennung der Verbindung, üblicherweise "origin" für erste/normale Verbindung$
 
-$\small	{Link = da vom lokalen Repository ausgegangen wird (übers Terminal), muss ein Ziel angegeben sein.}$
+$\small	Link = da vom lokalen Repository ausgegangen wird (übers Terminal), muss ein Ziel angegeben sein.$
 
 $\color{yellow}\textbf{git remote add origin REPOSITORYLINK}$
 
@@ -46,9 +46,9 @@ $\color{yellow}\textbf{git add .}$
 
 #### -- Commit
 
-$\small	{Der Commit selbst speichert den aktuellen Projektstand im lokalen Repository (.git-Ordner)}$
+$\small	Der Commit selbst speichert den aktuellen Projektstand im lokalen Repository (.git-Ordner)$
 
-$\small	{-m = Message. Angeben welche Veränderungen es seit dem letzten Commit gegeben hat.}$
+$\small	-m = Message. Angeben welche Veränderungen es seit dem letzten Commit gegeben hat.$
 
 $\color{yellow}\textbf{git commit -m "Stand Commit: Projekt erstellt"}$
 
@@ -56,7 +56,7 @@ $\color{yellow}\textbf{git commit -m "Stand Commit: Projekt erstellt"}$
 
 #### -- (einmalig beim ersten Push) aktuellen Branch in "main" umbenennen.
 
-$\small	{-M erzwingt die Änderung.}$
+$\small	-M erzwingt die Änderung.$
 
 $\color{yellow}\textbf{git branch -M main}$
 
@@ -64,15 +64,15 @@ $\color{yellow}\textbf{git branch -M main}$
 
 #### -- Pushen
 
-	$\tiny-u = setzt upstream-Verbindung (von lokal auf remote).$
+	$\small -u = setzt upstream-Verbindung (von lokal auf remote).$
 
-	$\tiny"origin" = Verbindung zu remote$
+	$\small "origin" = Verbindung zu remote$
 
-	$\tiny"main" = aktiver Branch$
+	$\small "main" = aktiver Branch$
 
-	$\tiny-f oder --force wenn man überschreiben möchte$
+	$\small -f oder --force wenn man überschreiben möchte$
 
-	$\tiny-Bei späteren Commits geht einfach nur "git push"$
+	$\small -Bei späteren Commits geht einfach nur "git push"$
 
 $\color{yellow}\textbf{git push -u origin main}$
 
