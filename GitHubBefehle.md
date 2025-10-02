@@ -20,7 +20,7 @@ git init
 git remote add origin REPOSITORYLINK
 ```
 
-> remote = GitHub, spricht remote repository an.
+> remote = (hier) GitHub, spricht remote repository an.
 
 > add = fügt neue Verbindung zu einem lokalen Repository hinzu
 
@@ -42,11 +42,11 @@ git branch -M main
 ```bash
 git push -u origin main
 ```
-> u = setzt Upstream-Verbindung (von lokal auf remote) - dies bleibt von hier an die Default-Verbindung bei Push&Pull<br>
+> `-u` = setzt Upstream-Verbindung (von local auf remote) - dies bleibt von hier an die Default-Verbindung bei Push&Pull<br>
 
-> origin" = (beliebiger, aber gängiger Name für) Verbindung zu remote<br>
+> `origin` = (beliebiger, aber gängiger Name für) Verbindung zu remote<br>
 
-> "main" = Name des aktiven Branches<br>
+> `main` = Name des aktiven Branches<br>
 
 > `f` oder `--force` wenn man überschreiben möchte<br>
 
@@ -60,22 +60,19 @@ git push -u origin main
 git add .
 ```
 
-
 #### -- Commit --
-
-Der Commit selbst speichert den aktuellen Projektstand im lokalen Repository (.git-Ordner)
-
-> -m = message. Angeben welche Veränderungen es seit dem letzten Commit gegeben hat.
-
 ```bash
 git commit -m "Stand Commit: Projekt erstellt"
 ```
+> Der Commit selbst speichert den aktuellen Projektstand im lokalen Repository (.git-Ordner)
+
+> -m = message. Angeben welche Veränderungen es seit dem letzten Commit gegeben hat.
 
 #### -- Pushen --
-
-
-
-
+```bash
+git push
+```
+> Push lädt den Commit auf Remote bzw. GitHub hoch
 
 ### Repository von Remote (GitHub) auf Local (PC) Herunterladen
 
@@ -123,6 +120,7 @@ git restore .
 ```bash
 rmdir /s /q .git
 ```
+
 
 
 
