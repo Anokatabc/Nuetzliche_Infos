@@ -19,13 +19,13 @@ git init
 
 #### -- Lokales Repository mit bestehendem Repository auf GitHub verbinden. --
 
-$\small \qquad \text	{remote = GitHub, spricht remote repository an.}$
+remote = GitHub, spricht remote repository an.
 
-$\small \qquad \text	{add = fügt neue Verbindung zu einem lokalen Repository hinzu}$
+add = fügt neue Verbindung zu einem lokalen Repository hinzu
 
-$\small \qquad \text	{origin = beliebige Benennung der Verbindung, üblicherweise "origin" für erste/normale Verbindung}$
+origin = beliebige Benennung der Verbindung, üblicherweise "origin" für erste/normale Verbindung
 
-$\small \qquad \text	{Link = da vom lokalen Repository ausgegangen wird (übers Terminal), muss ein Ziel angegeben sein.}$
+Link = da vom lokalen Repository ausgegangen wird (übers Terminal), muss ein Ziel angegeben sein.
 
 ```bash
 git remote add origin REPOSITORYLINK
@@ -36,21 +36,21 @@ git remote add origin REPOSITORYLINK
 
 #### -- (einmalig vor dem ersten Push) aktuellen Branch in "main" umbenennen. --
 
-$\small \qquad \text	{-M (Move) erzwingt die Änderung, auch wenn Branch "main" schon existiert.}$
+M (Move) erzwingt die Änderung, auch wenn Branch "main" schon existiert.
 
 ```bash
 git branch -M main
 ```
 
-$\small \qquad \text {-u = setzt Upstream-Verbindung (von lokal auf remote) - dies bleibt von hier an die Default-Verbindung bei Push&Pull}$
+u = setzt Upstream-Verbindung (von lokal auf remote) - dies bleibt von hier an die Default-Verbindung bei Push&Pull
 
-$\small \qquad \text {"origin" = (beliebiger, aber gängiger Name für) Verbindung zu remote}$
+origin" = (beliebiger, aber gängiger Name für) Verbindung zu remote
 
-$\small \qquad \text {"main" = Name des aktiven Branches}$
+main" = Name des aktiven Branches
  
-$\small \qquad \text {`-f` oder `--force` wenn man überschreiben möchte}$
+f` oder `--force` wenn man überschreiben möchte
 
-$\small \qquad \text {-Bei späteren Commits geht einfach nur "git push"}$
+Bei späteren Commits geht einfach nur "git push"
 
 ```bash
 git push -u origin main
@@ -65,9 +65,9 @@ git add .
 
 #### -- Commit --
 
-$\small \qquad \text	{Der Commit selbst speichert den aktuellen Projektstand im lokalen Repository (.git-Ordner)}$
+Der Commit selbst speichert den aktuellen Projektstand im lokalen Repository (.git-Ordner)
 
-$\small \qquad \text	{-m = Message. Angeben welche Veränderungen es seit dem letzten Commit gegeben hat.}$
+m = Message. Angeben welche Veränderungen es seit dem letzten Commit gegeben hat.
 
 ```bash
 git commit -m "Stand Commit: Projekt erstellt"
@@ -82,12 +82,12 @@ git commit -m "Stand Commit: Projekt erstellt"
 ### Repository von Remote (GitHub) auf Local (PC) Herunterladen
 
 #### -- (Wenn nicht lokal vorhanden) Repository von GitHub herunterladen und lokal erstellen -> ins Wunschverzeichnis hineinnavigieren
-$\small \qquad \text {clone erstellt ein lokales Repository nach dem Vorbild des Remote}$
+clone erstellt ein lokales Repository nach dem Vorbild des Remote
 ```bash
 git clone REPOSITORYLINK
 ```
 #### -- (Wenn lokal vorhanden) Repository von GitHub mit lokalem Repository synchronisieren (downstream)
-$\small \qquad \text {Sofern noch kein}$
+Sofern noch kein
 
 #### -- 
 #### -- 
@@ -116,15 +116,16 @@ git restore .
 
 #### -- Lokales Repository (unter Windows) löschen -> erst hineinnavigieren --
 
-$\small \qquad \text	{/s = subdirectories}$
+s = subdirectories
 
-$\small \qquad \text	{/q = ohne Bestätigung}$
+q = ohne Bestätigung
 
-$\small \qquad \text	{.git = \[Dateiordner]}$
+git = \[Dateiordner]
 
 ```bash
 rmdir /s /q .git
 ```
+
 
 
 
