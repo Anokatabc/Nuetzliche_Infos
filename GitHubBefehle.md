@@ -36,7 +36,7 @@ git remote add origin REPOSITORYLINK
 
 #### -- (einmalig vor dem ersten Push) aktuellen Branch in "main" umbenennen. --
 
-M (Move) erzwingt die Änderung, auch wenn Branch "main" schon existiert.
+> -M (Move) erzwingt die Änderung, auch wenn Branch "main" schon existiert.
 
 ```bash
 git branch -M main
@@ -82,12 +82,12 @@ git commit -m "Stand Commit: Projekt erstellt"
 ### Repository von Remote (GitHub) auf Local (PC) Herunterladen
 
 #### -- (Wenn nicht lokal vorhanden) Repository von GitHub herunterladen und lokal erstellen -> ins Wunschverzeichnis hineinnavigieren
-clone erstellt ein lokales Repository nach dem Vorbild des Remote
+> "clone" erstellt ein lokales Repository nach dem Vorbild des Remote
 ```bash
 git clone REPOSITORYLINK
 ```
 #### -- (Wenn lokal vorhanden) Repository von GitHub mit lokalem Repository synchronisieren (downstream)
-Sofern noch kein
+> Sofern noch kein Initial Commit stattgefunden hat, 
 
 #### -- 
 #### -- 
@@ -125,6 +125,7 @@ git restore .
 ```bash
 rmdir /s /q .git
 ```
+
 
 
 
