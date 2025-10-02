@@ -64,15 +64,15 @@ $\small \qquad \text	{-M erzwingt die Änderung.}$
 
 #### -- Pushen
 
-	$\small \text {-u = setzt upstream-Verbindung (von lokal auf remote).}$
+$\small \qquad \text {-u = setzt upstream-Verbindung (von lokal auf remote).}$
 
-	$\small \text {"origin" = Verbindung zu remote}$
+$\small \qquad \text {"origin" = Verbindung zu remote}$
 
-	$\small \text {"main" = aktiver Branch}$
+$\small \qquad \text {"main" = aktiver Branch}$
+ 
+$\small \qquad \text {-f oder --force wenn man überschreiben möchte}$
 
-	$\small \text {-f oder --force wenn man überschreiben möchte}$
-
-	$\small \text {-Bei späteren Commits geht einfach nur "git push"}$
+$\small \qquad \text {-Bei späteren Commits geht einfach nur "git push"}$
 
 #### $\color{yellow}\textbf{git push -u origin main}$
 
