@@ -2,13 +2,11 @@
 
 ### Navigation und Erstellung/Einrichtung
 
-##### -- Lokales Repository finden (mit cd und dir herumnavigieren) --
+#### -- Lokales Repository finden (mit cd und dir herumnavigieren) --
 
 ```bash
 git rev-parse --show-toplevel
 ```
-
-
 
 #### -- Lokales Repository erstellen (initialisieren) -> erst in Wunschverzeichnis hineinnavigieren --
 
@@ -16,8 +14,11 @@ git rev-parse --show-toplevel
 git init
 ```
 
-
 #### -- Lokales Repository mit bestehendem Repository auf GitHub verbinden. --
+
+```bash
+git remote add origin REPOSITORYLINK
+```
 
 > remote = GitHub, spricht remote repository an.
 
@@ -27,9 +28,7 @@ git init
 
 > Link = da vom lokalen Repository ausgegangen wird (übers Terminal), muss ein Ziel angegeben sein.
 
-```bash
-git remote add origin REPOSITORYLINK
-```
+
 
 
 ### Hochladen und Synchronisieren (add (=Stage) -> commit -> push)
@@ -67,7 +66,7 @@ git add .
 
 Der Commit selbst speichert den aktuellen Projektstand im lokalen Repository (.git-Ordner)
 
-> m = Message. Angeben welche Veränderungen es seit dem letzten Commit gegeben hat.
+> -m = message. Angeben welche Veränderungen es seit dem letzten Commit gegeben hat.
 
 ```bash
 git commit -m "Stand Commit: Projekt erstellt"
@@ -125,6 +124,7 @@ git restore .
 ```bash
 rmdir /s /q .git
 ```
+
 
 
 
