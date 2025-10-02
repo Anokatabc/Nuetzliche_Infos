@@ -6,11 +6,11 @@
 
 ##### -- Lokales Repository relokalisieren (u. a. löschen) -> erst hineinnavigieren
 
- 	*/s = subdirectories*
+ 		*/s = subdirectories*
 
- 	*/q = ohne Bestätigung*
+ 		*/q = ohne Bestätigung*
 
- 	*.git = \[Dateiordner]*
+ 		*.git = \[Dateiordner]*
 
 **rmdir /s /q .git**
 
