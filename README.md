@@ -2,7 +2,7 @@
 
 ##### -- Lokales Repository finden (mit cd und dir herumnavigieren)
 
-<large>$\color{yellow}\textbf{git rev-parse --show-toplevel}$</large>
+#### $\color{yellow}\textbf{git rev-parse --show-toplevel}$
 
 
 
@@ -14,13 +14,13 @@ $\small \text	{/q = ohne Bestätigung}$
 
 $\small \text	{.git = \[Dateiordner]}$
 
-<large>$\color{yellow}\textbf{rmdir /s /q .git}$</large>
+#### $\color{yellow}\textbf{rmdir /s /q .git}$
 
 
 
 #### -- Lokales Repository erstellen (initialisieren) -> erst hineinnavigieren
 
-<large>$\color{yellow}\textbf{git init}$</large>
+#### $\color{yellow}\textbf{git init}$
 
 
 
@@ -34,13 +34,13 @@ $\small \text	{origin = beliebige Benennung der Verbindung, üblicherweise "orig
 
 $\small \text	{Link = da vom lokalen Repository ausgegangen wird (übers Terminal), muss ein Ziel angegeben sein.}$
 
-<large>$\color{yellow}\textbf{git remote add origin REPOSITORYLINK}$</large>
+#### $\color{yellow}\textbf{git remote add origin REPOSITORYLINK}$
 
 
 
 #### -- Alle Unterordner "stagen" ("ready for commit")
 
-<large>$\color{yellow}\textbf{git add .}$</large>
+#### $\color{yellow}\textbf{git add .}$
 
 
 
@@ -50,7 +50,7 @@ $\small \text	{Der Commit selbst speichert den aktuellen Projektstand im lokalen
 
 $\small \text	{-m = Message. Angeben welche Veränderungen es seit dem letzten Commit gegeben hat.}$
 
-<large>$\color{yellow}\textbf{git commit -m "Stand Commit: Projekt erstellt"}$</large>
+#### $\color{yellow}\textbf{git commit -m "Stand Commit: Projekt erstellt"}$
 
 
 
@@ -58,7 +58,7 @@ $\small \text	{-m = Message. Angeben welche Veränderungen es seit dem letzten C
 
 $\small \text	{-M erzwingt die Änderung.}$
 
-<large>$\color{yellow}\textbf{git branch -M main}$</large>
+#### $\color{yellow}\textbf{git branch -M main}$
 
 
 
@@ -74,23 +74,23 @@ $\small \text	{-M erzwingt die Änderung.}$
 
 	$\small \text {-Bei späteren Commits geht einfach nur "git push"}$
 
-<large>$\color{yellow}\textbf{git push -u origin main}$</large>
+#### $\color{yellow}\textbf{git push -u origin main}$
 
 
 
 #### -- Änderungen seit letztem Commit prüfen
 
-<large>$\color{yellow}\textbf{git diff}$</large>
+#### $\color{yellow}\textbf{git diff}$
 
 
 
 #### -- Sehen was aktuell gestaged ist
 
-<large>$\color{yellow}\textbf{git status}$</large>
+#### $\color{yellow}\textbf{git status}$
 
 
 
 #### -- Von .git Ordner wiederherstellen (Stand: Letzter Commit)
 
-<large>$\color{yellow}\textbf{git restore .}$</large>
+#### $\color{yellow}\textbf{git restore .}$
 
