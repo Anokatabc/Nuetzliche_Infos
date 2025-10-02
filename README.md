@@ -1,6 +1,6 @@
 ###### -- Lokales Repository finden (mit cd und dir herumnavigieren)
 
-$\color{yellow}{**git rev-parse --show-toplevel**}$
+$\color{yellow}{git rev-parse --show-toplevel}$
 
 
 
