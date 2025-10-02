@@ -6,7 +6,7 @@ git init
 > Initialisiert ein neues Git-Repository im aktuellen Ordner.
 
 | Option | Bedeutung    |
-|--------|--------------|
+|---------|-------------|
 | -m     | Commit-Message|
 
 
