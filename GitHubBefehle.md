@@ -44,6 +44,8 @@ git remote add origin REPOSITORYLINK
 ```
 
 
+### Hochladen und Synchronisieren (Stage -> Commit -> Push)
+
 #### -- Alle Unterordner "stagen" ("ready for commit") --
 
 ```bash
@@ -88,6 +90,8 @@ git push -u origin main
 ```
 
 
+### Verwaltungsbefehle
+
 #### -- Änderungen seit letztem Commit prüfen --
 
 ```bash
@@ -107,6 +111,7 @@ git status
 ```bash
 git restore .
 ```
+
 
 
 
