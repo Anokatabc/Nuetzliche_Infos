@@ -1,12 +1,12 @@
 ## GitHub-Befehle (Übersicht)
 
-##### -- Lokales Repository finden (mit cd und dir herumnavigieren)
+##### -- Lokales Repository finden (mit cd und dir herumnavigieren) --
 
 #### $\color{yellow}\textbf{git rev-parse --show-toplevel}$
 
 
 
-#### -- Lokales Repository relokalisieren (u. a. löschen) -> erst hineinnavigieren
+#### -- Lokales Repository relokalisieren (u. a. löschen) -> erst hineinnavigieren --
 
 $\small \qquad \text	{/s = subdirectories}$
 
@@ -18,13 +18,13 @@ $\small \qquad \text	{.git = \[Dateiordner]}$
 
 
 
-#### -- Lokales Repository erstellen (initialisieren) -> erst hineinnavigieren
+#### -- Lokales Repository erstellen (initialisieren) -> erst hineinnavigieren --
 
 #### $\color{yellow}\textbf{git init}$
 
 
 
-#### -- Lokales Repository mit bestehendem R. auf GitHub verbinden.
+#### -- Lokales Repository mit bestehendem R. auf GitHub verbinden. --
 
 $\small \qquad \text	{remote = GitHub, spricht remote repository an.}$
 
@@ -38,13 +38,13 @@ $\small \qquad \text	{Link = da vom lokalen Repository ausgegangen wird (übers 
 
 
 
-#### -- Alle Unterordner "stagen" ("ready for commit")
+#### -- Alle Unterordner "stagen" ("ready for commit") --
 
 #### $\color{yellow}\textbf{git add .}$
 
 
 
-#### -- Commit
+#### -- Commit --
 
 $\small \qquad \text	{Der Commit selbst speichert den aktuellen Projektstand im lokalen Repository (.git-Ordner)}$
 
@@ -54,7 +54,7 @@ $\small \qquad \text	{-m = Message. Angeben welche Veränderungen es seit dem le
 
 
 
-#### -- (einmalig beim ersten Push) aktuellen Branch in "main" umbenennen.
+#### -- (einmalig beim ersten Push) aktuellen Branch in "main" umbenennen. --
 
 $\small \qquad \text	{-M erzwingt die Änderung.}$
 
@@ -62,7 +62,7 @@ $\small \qquad \text	{-M erzwingt die Änderung.}$
 
 
 
-#### -- Pushen
+#### -- Pushen --
 
 $\small \qquad \text {-u = setzt upstream-Verbindung (von lokal auf remote).}$
 
@@ -78,19 +78,19 @@ $\small \qquad \text {-Bei späteren Commits geht einfach nur "git push"}$
 
 
 
-#### -- Änderungen seit letztem Commit prüfen
+#### -- Änderungen seit letztem Commit prüfen --
 
 #### $\color{yellow}\textbf{git diff}$
 
 
 
-#### -- Sehen was aktuell gestaged ist
+#### -- Sehen was aktuell gestaged ist --
 
 #### $\color{yellow}\textbf{git status}$
 
 
 
-#### -- Von .git Ordner wiederherstellen (Stand: Letzter Commit)
+#### -- Von .git Ordner wiederherstellen (Stand: Letzter Commit) --
 
 #### $\color{yellow}\textbf{git restore .}$
 
