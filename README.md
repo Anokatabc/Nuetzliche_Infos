@@ -1,6 +1,3 @@
-$\color{red}\math{E = MC^2}$
-
-
 ###### -- Lokales Repository finden (mit cd und dir herumnavigieren)
 
 **git rev-parse --show-toplevel**
@@ -21,7 +18,7 @@ $\color{red}\math{E = MC^2}$
 
 ##### -- Lokales Repository erstellen (initialisieren) -> erst hineinnavigieren
 
-**git init**
+$\color{gray}**git init**$
 
 
 
