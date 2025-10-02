@@ -1,14 +1,14 @@
-# GitHub-Befehle (Übersicht)
+## GitHub-Befehle (Übersicht)
 
-## Navigation und Erstellung/Einrichtung
+### Navigation und Erstellung/Einrichtung
 
-### -- Lokales Repository finden (mit cd und dir herumnavigieren) --
+#### -- Lokales Repository finden (mit cd und dir herumnavigieren) --
 ```bash
 git rev-parse --show-toplevel
 ```
 > Ermittelt von einem Kindelement aus (aufwärts) den Ordner, der als Repository markiert ist. 
 
-### -- Lokales Repository erstellen (initialisieren) -> erst in Wunschverzeichnis hineinnavigieren --
+#### -- Lokales Repository erstellen (initialisieren) -> erst in Wunschverzeichnis hineinnavigieren --
 ```bash
 git init
 ```
@@ -109,5 +109,6 @@ rmdir /s /q .git
 > q = ohne Bestätigung
 
 > git = \[Dateiordner]
+
 
 
