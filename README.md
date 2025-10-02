@@ -1,1 +1,1 @@
-#### Ein paar nützliche Infos und Tipps & Tricks :)
+# Ein paar nützliche Infos und Tipps & Tricks :)
