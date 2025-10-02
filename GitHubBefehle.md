@@ -3,38 +3,32 @@
 ### Navigation und Erstellung/Einrichtung
 
 #### -- Lokales Repository finden (mit cd und dir herumnavigieren) --
-
 ```bash
 git rev-parse --show-toplevel
 ```
+> Ermittelt von einem Kindelement aus (aufwärts) den Ordner, der als Repository markiert ist. 
 
 #### -- Lokales Repository erstellen (initialisieren) -> erst in Wunschverzeichnis hineinnavigieren --
-
 ```bash
 git init
 ```
-
-#### -- Lokales Repository mit bestehendem Repository auf GitHub verbinden. --
-
+> Initialisiert (erstellt) ein lokales Repository im angegebenen Verzeichnis.
+> 
+#### -- Lokales Repository mit bestehendem Repository auf GitHub verbinden. (Nicht nötig nach `clone`) --
 ```bash
 git remote add origin REPOSITORYLINK
 ```
+> remote = (hier) GitHub, spricht remote Repository an.
 
-> remote = (hier) GitHub, spricht remote repository an.
+> add = Fügt neue Verbindung zu einem lokalen Repository hinzu
 
-> add = fügt neue Verbindung zu einem lokalen Repository hinzu
+> origin = Beliebige Benennung der Verbindung, üblicherweise "origin" für erste/normale Verbindung
 
-> origin = beliebige Benennung der Verbindung, üblicherweise "origin" für erste/normale Verbindung
-
-> Link = da vom lokalen Repository ausgegangen wird (übers Terminal), muss ein Ziel angegeben sein
-
-
-
+> Link = Da anfänglich nur vom lokalen Repository ausgegangen wird, muss ein Ziel angegeben werden
 
 ### Hochladen und Synchronisieren (add (=Stage) -> commit -> push)
 
 #### -- (einmalig mit dem ersten Push) aktuellen Branch in "main" umbenennen. --
-
 ```bash
 git branch -M main
 ```
@@ -120,6 +114,7 @@ git restore .
 ```bash
 rmdir /s /q .git
 ```
+
 
 
 
