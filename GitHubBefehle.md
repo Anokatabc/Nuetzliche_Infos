@@ -27,8 +27,6 @@ git remote add origin REPOSITORYLINK
 
 > Ziel-Link = Da anfänglich nur vom lokalen Repository ausgegangen wird, muss ein Ziel angegeben werden.
 
-### Hochladen und Synchronisieren (add (=Stage) -> commit -> push)
-
 ### Einmalig bei dem ersten Push
 #### -- Aktuellen Branch in "main" umbenennen. 
 ```bash
@@ -39,36 +37,36 @@ git branch -M main
 ```bash
 git push -u origin main
 ```
-> `-u` = setzt Upstream-Verbindung (von local auf remote) - dies bleibt von hier an die Default-Verbindung bei Push&Pull
+> `-u` = setzt Upstream-Verbindung (von local auf remote) - dies bleibt von hier an die Default-Verbindung bei Push&Pull.
 
-> `origin` = (beliebiger, aber gängiger Name für) Verbindung zu remote
+> `origin` = (beliebiger, aber gängiger Name für) Verbindung zu remote.
 
-> `main` = Name des aktiven Branches
+> `main` = Name des aktiven Branches.
 
-> `f` oder `--force` wenn man überschreiben möchte
+> `-f` oder `--force` wenn man überschreiben möchte - dies könnte u. U. nötig sein falls Default-Einstellungen etwas blockieren.
 
-> -> Bei späteren Commits geht einfach nur `git push`
+> -> Bei späteren Commits geht einfach nur `git push`.
 
-### Üblicher Upload-Workflow
-#### -- Alle Unterordner "stagen" ("ready for commit") --
+### Üblicher Upload-Workflow | 1) add (=Stage) -> 2) commit -> 3) push
+#### -- 1) __Add__ - Alle Unterordner "stagen" ("ready for commit") --
 ```bash
 git add .
 ```
 > Punkt `.` ist Wildcard für alle Unterordner. Alternativ lassen sich auch spezifische Ordnerpfade angeben.
 
-#### -- Commit --
+#### -- 2) __Commit__ (in ".git" / im lokalen Repository speichern)--
 ```bash
 git commit -m "Stand Commit: Projekt erstellt"
 ```
-> Der Commit selbst speichert den aktuellen Projektstand im lokalen Repository (d. h. im .git-Ordner)
+> Der Commit selbst speichert den aktuellen Projektstand im lokalen Repository (d. h. im .git-Ordner).
 
 > `-m` = message. Angeben welche Veränderungen es seit dem letzten Commit gegeben hat.
 
-#### -- Pushen --
+#### -- 3) __Push__ (lokales Repository auf das remote Repository hochladen) --
 ```bash
 git push
 ```
-> Ein Push lädt den Commit auf Remote bzw. GitHub hoch
+> Ein Push lädt den Commit auf remote bzw. GitHub hoch.
 
 ### Repository von Remote (GitHub) auf Local (PC) Herunterladen
 
@@ -82,7 +80,6 @@ git clone REPOSITORYLINK
 > Sofern noch kein Initial Commit stattgefunden hat, 
 
 #### -- 
-#### -- 
 
 ### Verwaltungsbefehle
 
@@ -90,7 +87,7 @@ git clone REPOSITORYLINK
 ```bash
 git diff
 ```
-> Listet im Terminal alle Änderungen auf, die seit letztem Commit stattgefunden haben.
+> Listet im Terminal alle Änderungen auf, die seit dem letzten Commit stattgefunden haben.
 
 #### -- Sehen was aktuell gestaged ist --
 ```bash
@@ -113,6 +110,7 @@ rmdir /s /q .git
 > q = ohne Bestätigung
 
 > git = \[Dateiordner]
+
 
 
 
