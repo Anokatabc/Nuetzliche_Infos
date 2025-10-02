@@ -98,7 +98,7 @@ $\textbf{\textcolor{red}{Fett und rot}}$
 
 ##### -- Lokales Repository erstellen (initialisieren) -> erst hineinnavigieren
 
-$\color{red}\textbf{git init}$
+$\color{red}\Huge{git init}$
 
 
 
