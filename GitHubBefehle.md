@@ -1,5 +1,7 @@
 ## GitHub-Befehle (Übersicht)
 
+### -- Navigation und Erstellung
+
 ##### -- Lokales Repository finden (mit cd und dir herumnavigieren) --
 
 ```bash
@@ -7,7 +9,7 @@ git rev-parse --show-toplevel
 ```
 
 
-#### -- Lokales Repository relokalisieren (u. a. löschen) -> erst hineinnavigieren --
+#### -- Lokales Repository löschen -> erst hineinnavigieren --
 
 $\small \qquad \text	{/s = subdirectories}$
 
@@ -105,6 +107,7 @@ git status
 ```bash
 git restore .
 ```
+
 
 
 
