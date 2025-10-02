@@ -8,11 +8,11 @@
 
 #### -- Lokales Repository relokalisieren (u. a. löschen) -> erst hineinnavigieren
 
-$\small \text \quad	{/s = subdirectories}$
+$\small \text \qquad	{/s = subdirectories}$
 
-$\small \text \quad	{/q = ohne Bestätigung}$
+$\small \text \qquad	{/q = ohne Bestätigung}$
 
-$\small \text \quad	{.git = \[Dateiordner]}$
+$\small \text \qquad	{.git = \[Dateiordner]}$
 
 #### $\color{yellow}\textbf{rmdir /s /q .git}$
 
@@ -26,13 +26,13 @@ $\small \text \quad	{.git = \[Dateiordner]}$
 
 #### -- Lokales Repository mit bestehendem R. auf GitHub verbinden.
 
-$\small \text \quad	{remote = GitHub, spricht remote repository an.}$
+$\small \text \qquad	{remote = GitHub, spricht remote repository an.}$
 
-$\small \text \quad	{add = fügt neue Verbindung zu einem lokalen Repository hinzu}$
+$\small \text \qquad	{add = fügt neue Verbindung zu einem lokalen Repository hinzu}$
 
-$\small \text \quad	{origin = beliebige Benennung der Verbindung, üblicherweise "origin" für erste/normale Verbindung}$
+$\small \text \qquad	{origin = beliebige Benennung der Verbindung, üblicherweise "origin" für erste/normale Verbindung}$
 
-$\small \text \quad	{Link = da vom lokalen Repository ausgegangen wird (übers Terminal), muss ein Ziel angegeben sein.}$
+$\small \text \qquad	{Link = da vom lokalen Repository ausgegangen wird (übers Terminal), muss ein Ziel angegeben sein.}$
 
 #### $\color{yellow}\textbf{git remote add origin REPOSITORYLINK}$
 
@@ -46,9 +46,9 @@ $\small \text \quad	{Link = da vom lokalen Repository ausgegangen wird (übers T
 
 #### -- Commit
 
-$\small \text \quad	{Der Commit selbst speichert den aktuellen Projektstand im lokalen Repository (.git-Ordner)}$
+$\small \text \qquad	{Der Commit selbst speichert den aktuellen Projektstand im lokalen Repository (.git-Ordner)}$
 
-$\small \text \quad	{-m = Message. Angeben welche Veränderungen es seit dem letzten Commit gegeben hat.}$
+$\small \text \qquad	{-m = Message. Angeben welche Veränderungen es seit dem letzten Commit gegeben hat.}$
 
 #### $\color{yellow}\textbf{git commit -m "Stand Commit: Projekt erstellt"}$
 
@@ -56,7 +56,7 @@ $\small \text \quad	{-m = Message. Angeben welche Veränderungen es seit dem let
 
 #### -- (einmalig beim ersten Push) aktuellen Branch in "main" umbenennen.
 
-$\small \text \quad	{-M erzwingt die Änderung.}$
+$\small \text \qquad	{-M erzwingt die Änderung.}$
 
 #### $\color{yellow}\textbf{git branch -M main}$
 
