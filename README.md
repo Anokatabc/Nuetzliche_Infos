@@ -6,11 +6,11 @@ $\color{yellow}\textbf{git rev-parse --show-toplevel}$
 
 ##### -- Lokales Repository relokalisieren (u. a. löschen) -> erst hineinnavigieren
 
-$\tiny 	/s = subdirectories$
+$\small	/s = subdirectories$
 
-$\tiny 	/q = ohne Bestätigung$
+$\small	/q = ohne Bestätigung$
 
-$\tiny 	.git = \[Dateiordner]$
+$\small	.git = \[Dateiordner]$
 
 $\color{yellow}\textbf{rmdir /s /q .git}$
 
@@ -24,13 +24,13 @@ $\color{yellow}\textbf{git init}$
 
 ##### -- Lokales Repository mit bestehendem R. auf GitHub verbinden.
 
-$\tiny 	remote = GitHub, spricht remote repository an.$
+$\small	remote = GitHub, spricht remote repository an.$
 
-$\tiny 	add = fügt neue Verbindung zu einem lokalen Repository hinzu$
+$\small	add = fügt neue Verbindung zu einem lokalen Repository hinzu$
 
-$\tiny 	origin = beliebige Benennung der Verbindung, üblicherweise "origin" für erste/normale Verbindung$
+$\small	origin = beliebige Benennung der Verbindung, üblicherweise "origin" für erste/normale Verbindung$
 
-$\tiny 	Link = da vom lokalen Repository ausgegangen wird (übers Terminal), muss ein Ziel angegeben sein.$
+$\small	Link = da vom lokalen Repository ausgegangen wird (übers Terminal), muss ein Ziel angegeben sein.$
 
 $\color{yellow}\textbf{git remote add origin REPOSITORYLINK}$
 
@@ -44,9 +44,9 @@ $\color{yellow}\textbf{git add .}$
 
 ##### -- Commit
 
-$\tiny 	Der Commit selbst speichert den aktuellen Projektstand im lokalen Repository (.git-Ordner)$
+$\small	Der Commit selbst speichert den aktuellen Projektstand im lokalen Repository (.git-Ordner)$
 
-$\tiny 	-m = Message. Angeben welche Veränderungen es seit dem letzten Commit gegeben hat.$
+$\small	-m = Message. Angeben welche Veränderungen es seit dem letzten Commit gegeben hat.$
 
 $\color{yellow}\textbf{git commit -m "Stand Commit: Projekt erstellt"}$
 
@@ -54,7 +54,7 @@ $\color{yellow}\textbf{git commit -m "Stand Commit: Projekt erstellt"}$
 
 ##### -- (einmalig beim ersten Push) aktuellen Branch in "main" umbenennen.
 
-$\tiny 	-M erzwingt die Änderung.$
+$\small	-M erzwingt die Änderung.$
 
 $\color{yellow}\textbf{git branch -M main}$
 
