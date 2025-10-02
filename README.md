@@ -1,4 +1,4 @@
-$\color{red}\text{E = MC^2}$
+$\color{red}\math{E = MC^2}$
 
 
 ###### -- Lokales Repository finden (mit cd und dir herumnavigieren)
