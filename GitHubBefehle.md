@@ -1,6 +1,6 @@
 ## GitHub-Befehle (Übersicht)
 
-### -- Navigation und Erstellung
+### Navigation und Erstellung
 
 ##### -- Lokales Repository finden (mit cd und dir herumnavigieren) --
 
@@ -107,6 +107,7 @@ git status
 ```bash
 git restore .
 ```
+
 
 
 
