@@ -35,12 +35,13 @@ git remote add origin REPOSITORYLINK
 
 #### -- (einmalig mit dem ersten Push) aktuellen Branch in "main" umbenennen. --
 
-**```bash
+```bash
 git branch -M main
-```**
-
+```
 > -M (Move) erzwingt die Änderung, auch wenn Branch "main" schon existiert.<br>
-
+```bash
+git push -u origin main
+```
 > u = setzt Upstream-Verbindung (von lokal auf remote) - dies bleibt von hier an die Default-Verbindung bei Push&Pull<br>
 
 > origin" = (beliebiger, aber gängiger Name für) Verbindung zu remote<br>
@@ -51,9 +52,7 @@ git branch -M main
 
 > Bei späteren Commits geht einfach nur `git push`
 
-```bash
-git push -u origin main
-```
+
 
 #### -- Alle Unterordner "stagen" ("ready for commit") --
 
@@ -124,6 +123,7 @@ git restore .
 ```bash
 rmdir /s /q .git
 ```
+
 
 
 
