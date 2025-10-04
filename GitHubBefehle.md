@@ -85,7 +85,7 @@ git push -u origin main
 ```
 > `-u` = setzt Upstream-Verbindung (von local auf remote) - dies bleibt von hier an die Default-Verbindung bei Push&Pull.
 
-> `origin` = (beliebiger, aber gängiger Name für) Verbindung zu remote.
+> `origin` = Beliebiger, aber üblicher Name für die Verbindung zu remote (GitHub).
 
 > `main` = Name des aktiven Branches.
 
@@ -132,6 +132,7 @@ rmdir /s /q .git
 > q = ohne Bestätigung
 
 > git = \[Dateiordner]
+
 
 
 
