@@ -33,7 +33,7 @@ git checkout -b BRANCHNAME
 git checkout BRANCHNAME
 ```
 > Findet in der Regel nur in größeren Projekten Anwendung, um zwischen verschiedenen Bearbeitungsversionen oder Aufgabenbereichen zu wechseln.
-> In modernen Projekten wird häufig auch `git switch [BRANCHNAME]` verwendet.
+> In modernen Projekten wird häufig auch `git switch BRANCHNAME` verwendet.
 
 #### -- Datei öffnen bzw. geöffnete Datei auf Commit-Stand zurücksetzen
 ```bash
@@ -47,7 +47,7 @@ git checkout DATEINAME
 
 ### $${\text{\color{blue} B. Navigation und Erstellung/Einrichtung}}$$
 
-#### -- Lokales Repository finden (wenn vorhanden) -> mit `cd` und `dir` herumnavigieren --
+#### -- Lokales Repository finden (wenn vorhanden) -> mit `cd` und `dir` im Terminal herumnavigieren --
 ```bash
 git rev-parse --show-toplevel
 ```
@@ -78,6 +78,7 @@ git remote add origin REPOSITORYLINK
 git branch -M main
 ```
 > `-M` (Move) erzwingt die Änderung, auch wenn Branch "main" schon existiert.
+> Dies ist oft notwendig weil noch "master" als Default-Branch gesetzt ist, was nicht mehr genutzt wird.
 #### -- Verbindung zum remote herstellen 
 ```bash
 git push -u origin main
@@ -90,7 +91,7 @@ git push -u origin main
 
 > `-f` oder `--force` wenn man überschreiben möchte - dies könnte u. U. nötig sein falls Default-Einstellungen etwas blockieren.
 
-> -> Bei späteren Commits geht einfach nur `git push`
+> -> Bei weiteren Updates/Uploads geht nun einfach nur `git push`
 
 ### $${\text{\color{blue} D. Repository von remote (GitHub) auf local (PC) Herunterladen}}$$
 
@@ -131,6 +132,7 @@ rmdir /s /q .git
 > q = ohne Bestätigung
 
 > git = \[Dateiordner]
+
 
 
 
