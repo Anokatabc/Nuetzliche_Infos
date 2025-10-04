@@ -1,6 +1,6 @@
-## GitHub-Befehle (Übersicht)
+## $${\text{\color{blue}GitHub-Befehle (Übersicht)}}$$
 
-### Navigation und Erstellung/Einrichtung
+### $${\text{\color{blue} Navigation und Erstellung/Einrichtung}}$$
 
 #### -- Lokales Repository finden (wenn vorhanden) -> mit `cd` und `dir` herumnavigieren --
 ```bash
@@ -27,7 +27,7 @@ git remote add origin REPOSITORYLINK
 
 > Ziel-Link = Da anfänglich nur vom lokalen Repository ausgegangen wird, muss ein Ziel angegeben werden.
 
-### Einmalig bei dem ersten Push
+### $${\text{\color{blue}Einmalig bei dem ersten Push}}$$
 #### -- Aktuellen Branch in "main" umbenennen. 
 ```bash
 git branch -M main
@@ -43,11 +43,11 @@ git push -u origin main
 
 > `main` = Name des aktiven Branches.
 
-> `-f` oder `--force` wenn man überschreiben möchte - dies könnte u. U. nötig sein falls Default-Einstellungen etwas blockieren.
+> `-f` oder `--force` wenn man ohne Rücksicht auf Verluste überschreiben möchte - dies könnte u. U. nötig sein falls Default-Einstellungen etwas blockieren. 
 
 > -> Bei späteren Commits geht einfach nur `git push`.
 
-### Üblicher Upload-Workflow | 1) add (=Stage) -> 2) commit -> 3) push
+### $${\text{\color{blue}Üblicher Upload-Workflow | 1) add (=Stage) -> 2) commit -> 3) push}}$$
 #### -- 1) __Add__ - Alle Unterordner "stagen" ("ready for commit") --
 ```bash
 git add .
@@ -68,7 +68,7 @@ git push
 ```
 > Ein Push lädt den Commit auf remote bzw. GitHub hoch.
 
-### Repository von Remote (GitHub) auf Local (PC) Herunterladen
+### $${\text{\color{blue}Repository von Remote (GitHub) auf Local (PC) Herunterladen}}$$
 
 #### -- (Wenn nicht lokal vorhanden) Repository von GitHub herunterladen und lokal erstellen -> ins Wunschverzeichnis hineinnavigieren
 ```bash
@@ -77,11 +77,13 @@ git clone REPOSITORYLINK
 > `clone` erstellt ein lokales Repository nach dem Vorbild des Remote
 
 #### -- (Wenn lokal vorhanden) Repository von GitHub mit lokalem Repository synchronisieren (downstream)
-> Sofern noch kein Initial Commit stattgefunden hat, 
+```bash
+git pull
+```
+> Holt und integriert die Änderungen vom Remote-Repository in das lokale Repository.<br>
+> Falls es nicht funktioniert, liegt es vermutlich an der fehlenden Verbindung zum remote Repository (`git remote add origin [LINK]`), fehlender Branch-Übereinstimmung (`git branch -M main`) oder an fehlender Upstream-Verbindung (`git branch --set-upstream-to=origin/main`).
 
-#### -- 
-
-### Verwaltungsbefehle
+### $${\text{\color{blue}Verwaltungsbefehle}}$$
 
 #### -- Änderungen seit letztem Commit prüfen --
 ```bash
@@ -99,7 +101,7 @@ git status
 ```bash
 git restore .
 ```
-> Stellt Ordnerstruktur aus dem gespeicherten Repository in .git wiederher. Dazu muss kein lokales Repository bestehen - es wird nur der Ordner benötigt.
+> Stellt Projekt aus dem .git-Ordner bzw. aus dem letzten bestehenden Commit wiederher.
 
 #### -- Lokales Repository (unter Windows) löschen -> erst hineinnavigieren --
 ```bash
@@ -110,6 +112,7 @@ rmdir /s /q .git
 > q = ohne Bestätigung
 
 > git = \[Dateiordner]
+
 
 
 
