@@ -1,5 +1,48 @@
 ## $${\text{\color{blue}GitHub-Befehle (Übersicht)}}$$
 
+### $${\text{\color{blue}Üblicher Upload-Workflow | 1) add (=Stage) -> 2) commit -> 3) push}}$$
+#### -- 1) __Add__ - Alle Unterordner "stagen" ("ready for commit") --
+```bash
+git add .
+```
+> Punkt `.` ist Wildcard für alle Unterordner. Alternativ lassen sich auch spezifische Ordnerpfade angeben.
+
+#### -- 2) __Commit__ (in ".git" / im lokalen Repository speichern)--
+```bash
+git commit -m "Stand Commit: Projekt erstellt"
+```
+> Der Commit selbst speichert den aktuellen Projektstand im lokalen Repository (d. h. im .git-Ordner).
+
+> `-m` = message. Angeben welche Veränderungen es seit dem letzten Commit gegeben hat.
+
+#### -- 3) __Push__ (lokales Repository auf das Remote Repository hochladen) --
+```bash
+git push
+```
+> Ein Push lädt den Commit auf Remote bzw. GitHub hoch.
+
+#### -- Neuen Branch erstellen
+```bash
+git checkout -b BRANCHNAME
+```
+> Erstellt und wechselt zu einem neuen Branch mit dem angegebenen Namen. Alle seit dem letzten Commit vorgenommenen Änderungen werden auf diesen neuen Branch überschrieben. Der alte Branch verbleibt auf dem Stand des Commits.
+#### -- Aktiven Branch wechseln
+```bash
+git checkout BRANCHNAME
+```
+> Findet in der Regel nur in größeren Projekten Anwendung, um zwischen verschiedenen Bearbeitungsversionen oder Aufgabenbereichen zu wechseln.
+> In modernen Projekten wird häufig auch `git switch [BRANCHNAME]` verwendet.
+
+#### -- Datei öffnen bzw. geöffnete Datei auf Commit-Stand zurücksetzen
+```bash
+git checkout DATEINAME
+```
+> z.B. `git checkout README.md`
+> Öffnet die angegebene Datei im Remote Repository. Sollte diese Datei aktuell geöffnet sein, wird der Arbeitsbereich auf den Stand des letzten Commits zurückgesetzt.
+
+#### (Später) fetch, log und merge in Teamarbeit
+...
+
 ### $${\text{\color{blue} Navigation und Erstellung/Einrichtung}}$$
 
 #### -- Lokales Repository finden (wenn vorhanden) -> mit `cd` und `dir` herumnavigieren --
@@ -17,13 +60,13 @@ git init
 
 #### -- Lokales Repository mit bestehendem Repository auf GitHub verbinden (nicht nötig nach `clone`) --
 ```bash
-git remote add origin REPOSITORYLINK
+git Remote add origin REPOSITORYLINK
 ```
-> `remote` = (hier) GitHub, spricht remote Repository an.
+> `Remote` = (hier) GitHub, spricht Remote Repository an. Z.B. `git Remote add origin github.com/user/repository123`
 
 > `add` = Fügt neue Verbindung zu einem lokalen Repository hinzu.
 
-> `origin` = Beliebige Benennung der Verbindung, üblicherweise "origin" für erste/normale Verbindung.
+> `origin` = Origin ist eine gängige Benennung für das Remote Repository, oder genauer gesagt für die Verbindung zu Remote.
 
 > Ziel-Link = Da anfänglich nur vom lokalen Repository ausgegangen wird, muss ein Ziel angegeben werden.
 
@@ -37,36 +80,15 @@ git branch -M main
 ```bash
 git push -u origin main
 ```
-> `-u` = setzt Upstream-Verbindung (von local auf remote) - dies bleibt von hier an die Default-Verbindung bei Push&Pull.
+> `-u` = setzt Upstream-Verbindung (von Local auf Remote) - dies bleibt von hier an die Default-Verbindung bei Push&Pull.
 
-> `origin` = (beliebiger, aber gängiger Name für) Verbindung zu remote.
+> `origin` = (beliebiger, aber gängiger Name für) Verbindung zu Remote.
 
 > `main` = Name des aktiven Branches.
 
-> `-f` oder `--force` wenn man ohne Rücksicht auf Verluste überschreiben möchte - dies könnte u. U. nötig sein falls Default-Einstellungen etwas blockieren. 
+> `-f` oder `--force` wenn man überschreiben möchte - dies könnte u. U. nötig sein falls Default-Einstellungen etwas blockieren.
 
-> -> Bei späteren Commits geht einfach nur `git push`.
-
-### $${\text{\color{blue}Üblicher Upload-Workflow | 1) add (=Stage) -> 2) commit -> 3) push}}$$
-#### -- 1) __Add__ - Alle Unterordner "stagen" ("ready for commit") --
-```bash
-git add .
-```
-> Punkt `.` ist Wildcard für alle Unterordner. Alternativ lassen sich auch spezifische Ordnerpfade angeben.
-
-#### -- 2) __Commit__ (in ".git" / im lokalen Repository speichern)--
-```bash
-git commit -m "Stand Commit: Projekt erstellt"
-```
-> Der Commit selbst speichert den aktuellen Projektstand im lokalen Repository (d. h. im .git-Ordner).
-
-> `-m` = message. Angeben welche Veränderungen es seit dem letzten Commit gegeben hat.
-
-#### -- 3) __Push__ (lokales Repository auf das remote Repository hochladen) --
-```bash
-git push
-```
-> Ein Push lädt den Commit auf remote bzw. GitHub hoch.
+> -> Bei späteren Commits geht einfach nur `git push`
 
 ### $${\text{\color{blue}Repository von Remote (GitHub) auf Local (PC) Herunterladen}}$$
 
@@ -74,14 +96,14 @@ git push
 ```bash
 git clone REPOSITORYLINK
 ```
-> `clone` erstellt ein lokales Repository nach dem Vorbild des Remote
+> `clone` erstellt ein lokales Repository nach dem Vorbild des Remote, z.B. `git clone github.com/user/repository123`
+> Es wird im aktuell geöffneten Ordner ein neuer Ordner mit dem Repository-Namen erstellt.
+> Alternativ kann ein Zielordner angegeben werden, der zum Repository gemacht werden soll. 
 
 #### -- (Wenn lokal vorhanden) Repository von GitHub mit lokalem Repository synchronisieren (downstream)
-```bash
-git pull
-```
-> Holt und integriert die Änderungen vom Remote-Repository in das lokale Repository.<br>
-> Falls es nicht funktioniert, liegt es vermutlich an der fehlenden Verbindung zum remote Repository (`git remote add origin [LINK]`), fehlender Branch-Übereinstimmung (`git branch -M main`) oder an fehlender Upstream-Verbindung (`git branch --set-upstream-to=origin/main`).
+> Sofern noch kein Initial Commit stattgefunden hat, 
+
+#### -- 
 
 ### $${\text{\color{blue}Verwaltungsbefehle}}$$
 
@@ -101,7 +123,7 @@ git status
 ```bash
 git restore .
 ```
-> Stellt Projekt aus dem .git-Ordner bzw. aus dem letzten bestehenden Commit wiederher.
+> Stellt Ordnerstruktur aus dem gespeicherten Repository in .git wiederher. Dazu muss kein lokales Repository bestehen - es wird nur der Ordner benötigt.
 
 #### -- Lokales Repository (unter Windows) löschen -> erst hineinnavigieren --
 ```bash
