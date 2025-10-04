@@ -5,7 +5,7 @@
 ```bash
 git add .
 ```
-> Punkt `.` ist Wildcard für alle Unterordner. Alternativ lassen sich auch spezifische Ordnerpfade angeben.
+> Punkt `.` ist Wildcard für alle Unterordner. Alternativ lassen sich auch spezifische Ordnerpfade angeben, z.B. `git add index.html`
 
 #### -- 2) __Commit__ (in ".git" / im lokalen Repository speichern)--
 ```bash
@@ -134,6 +134,7 @@ rmdir /s /q .git
 > q = ohne Bestätigung
 
 > git = \[Dateiordner]
+
 
 
 
