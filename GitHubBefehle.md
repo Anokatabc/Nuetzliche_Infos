@@ -1,6 +1,6 @@
 ## $${\text{\color{blue}GitHub-Befehle (Übersicht)}}$$
 
-### $${\text{\color{blue}Üblicher Upload-Workflow | 1) add (=Stage) -> 2) commit -> 3) push}}$$
+### $${\text{\color{blue} A. Üblicher Upload-Workflow | 1) add (=Stage) -> 2) commit -> 3) push}}$$
 #### -- 1) __Add__ - Alle Unterordner "stagen" ("ready for commit") --
 ```bash
 git add .
@@ -20,6 +20,7 @@ git commit -m "Stand Commit: Projekt erstellt"
 git push
 ```
 > Ein Push lädt den Commit auf remote bzw. GitHub hoch.
+> Sofern es der erste Push überhaupt ist, am besten einmal Abschnitt C anschauen.
 
 #### -- Neuen Branch erstellen
 ```bash
@@ -44,7 +45,7 @@ git checkout DATEINAME
 #### -- (Später) fetch, log und merge in Teamarbeit
 ...
 
-### $${\text{\color{blue} Navigation und Erstellung/Einrichtung}}$$
+### $${\text{\color{blue} B. Navigation und Erstellung/Einrichtung}}$$
 
 #### -- Lokales Repository finden (wenn vorhanden) -> mit `cd` und `dir` herumnavigieren --
 ```bash
@@ -71,7 +72,7 @@ git remote add origin REPOSITORYLINK
 
 > Ziel-Link = Da anfänglich nur vom lokalen Repository ausgegangen wird, muss ein Ziel angegeben werden.
 
-### $${\text{\color{blue}Einmalig bei dem ersten Push}}$$
+### $${\text{\color{blue} C. Einmalig bei dem ersten Push}}$$
 #### -- Aktuellen Branch in "main" umbenennen. 
 ```bash
 git branch -M main
@@ -91,7 +92,7 @@ git push -u origin main
 
 > -> Bei späteren Commits geht einfach nur `git push`
 
-### $${\text{\color{blue}Repository von remote (GitHub) auf local (PC) Herunterladen}}$$
+### $${\text{\color{blue} D. Repository von remote (GitHub) auf local (PC) Herunterladen}}$$
 
 #### -- (Wenn nicht lokal vorhanden) Repository von GitHub herunterladen und lokal erstellen -> vorher ins Wunschverzeichnis hineinnavigieren
 ```bash
@@ -101,7 +102,7 @@ git clone REPOSITORYLINK
 > Es wird im aktuell geöffneten Ordner ein neuer Ordner mit dem Repository-Namen erstellt.
 > Alternativ kann ein Zielordner angegeben werden, der zum Repository gemacht werden soll, z.B. `git clone REPOSITORYLINK NeuesRepository` (alternativ absoluter Pfad C:\...).
 
-### $${\text{\color{blue}Verwaltungsbefehle}}$$
+### $${\text{\color{blue} E. Verwaltungsbefehle}}$$
 
 #### -- Änderungen seit letztem Commit prüfen --
 ```bash
@@ -130,6 +131,7 @@ rmdir /s /q .git
 > q = ohne Bestätigung
 
 > git = \[Dateiordner]
+
 
 
 
