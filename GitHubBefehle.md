@@ -41,7 +41,7 @@ git checkout DATEINAME
 > z.B. `git checkout README.md`
 > Öffnet die angegebene Datei im remote Repository. Sollte diese Datei aktuell geöffnet sein, wird der Arbeitsbereich auf den Stand des letzten Commits zurückgesetzt.
 
-#### (Später) fetch, log und merge in Teamarbeit
+#### -- (Später) fetch, log und merge in Teamarbeit
 ...
 
 ### $${\text{\color{blue} Navigation und Erstellung/Einrichtung}}$$
@@ -130,6 +130,7 @@ rmdir /s /q .git
 > q = ohne Bestätigung
 
 > git = \[Dateiordner]
+
 
 
 
