@@ -1,13 +1,13 @@
 ## $${\text{\color{blue}GitHub-Befehle (Übersicht)}}$$
 
 ### $${\text{\color{blue} A. Üblicher Upload-Workflow | 1) add (=Stage) -> 2) commit -> 3) push}}$$
-#### -- 1) __Add__ - Alle Unterordner "stagen" ("ready for commit") --
+#### -- 1) <ins>Add</ins> - Alle Unterordner "stagen" ("ready for commit") --
 ```bash
 git add .
 ```
 > Punkt `.` ist Wildcard für alle Unterordner. Alternativ lassen sich auch spezifische Ordnerpfade angeben.
 
-#### -- 2) __Commit__ (in ".git" / im lokalen Repository speichern)--
+#### -- 2) <ins>Commit</ins> (in ".git" / im lokalen Repository speichern)--
 ```bash
 git commit -m "Stand Commit: Projekt erstellt"
 ```
@@ -15,7 +15,7 @@ git commit -m "Stand Commit: Projekt erstellt"
 
 > `-m` = message. Angeben welche Veränderungen es seit dem letzten Commit gegeben hat.
 
-#### -- 3) __Push__ (lokales Repository auf das remote Repository hochladen) --
+#### -- 3) <ins>Push</ins> (lokales Repository auf das remote Repository hochladen) --
 ```bash
 git push
 ```
@@ -131,6 +131,7 @@ rmdir /s /q .git
 > q = ohne Bestätigung
 
 > git = \[Dateiordner]
+
 
 
 
