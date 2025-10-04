@@ -5,7 +5,7 @@
 ```bash
 git add .
 ```
-> Punkt `.` ist Wildcard für alle Unterordner. Alternativ lassen sich auch spezifische Ordnerpfade angeben, z.B. `git add index.html`
+> Punkt `.` ist Wildcard für alle Unterordner. Alternativ lassen sich auch spezifische Ordnerpfade angeben.
 
 #### -- 2) __Commit__ (in ".git" / im lokalen Repository speichern)--
 ```bash
@@ -15,16 +15,17 @@ git commit -m "Stand Commit: Projekt erstellt"
 
 > `-m` = message. Angeben welche Veränderungen es seit dem letzten Commit gegeben hat.
 
-#### -- 3) __Push__ (lokales Repository auf das Remote Repository hochladen) --
+#### -- 3) __Push__ (lokales Repository auf das remote Repository hochladen) --
 ```bash
 git push
 ```
-> Ein Push lädt den Commit auf Remote bzw. GitHub hoch.
+> Ein Push lädt den Commit auf remote bzw. GitHub hoch.
 
 #### -- Neuen Branch erstellen
 ```bash
 git checkout -b BRANCHNAME
 ```
+> `-b` steht für Branch.
 > Erstellt und wechselt zu einem neuen Branch mit dem angegebenen Namen. Alle seit dem letzten Commit vorgenommenen Änderungen werden auf diesen neuen Branch überschrieben. Der alte Branch verbleibt auf dem Stand des Commits.
 #### -- Aktiven Branch wechseln
 ```bash
@@ -38,7 +39,7 @@ git checkout BRANCHNAME
 git checkout DATEINAME
 ```
 > z.B. `git checkout README.md`
-> Öffnet die angegebene Datei im Remote Repository. Sollte diese Datei aktuell geöffnet sein, wird der Arbeitsbereich auf den Stand des letzten Commits zurückgesetzt.
+> Öffnet die angegebene Datei im remote Repository. Sollte diese Datei aktuell geöffnet sein, wird der Arbeitsbereich auf den Stand des letzten Commits zurückgesetzt.
 
 #### (Später) fetch, log und merge in Teamarbeit
 ...
@@ -56,17 +57,17 @@ git rev-parse --show-toplevel
 ```bash
 git init
 ```
-> Initialisiert (erstellt) ein lokales Repository im aktuellen Verzeichnis. Alternativ lässt sich auch ein bestimmtes Verzeichnis hinter `init` angeben.
+> Initialisiert (erstellt) ein lokales Repository im aktuellen Verzeichnis. Alternativ lässt sich auch ein bestimmtes Verzeichnis hinter `init` angeben, z.B. `git init C:\Users\Projekte\NeuesRepository`
 
 #### -- Lokales Repository mit bestehendem Repository auf GitHub verbinden (nicht nötig nach `clone`) --
 ```bash
-git Remote add origin REPOSITORYLINK
+git remote add origin REPOSITORYLINK
 ```
-> `Remote` = (hier) GitHub, spricht Remote Repository an. Z.B. `git Remote add origin github.com/user/repository123`
+> `remote` = (hier) GitHub, spricht remote Repository an. Z.B. `git remote add origin github.com/user/repository123`
 
 > `add` = Fügt neue Verbindung zu einem lokalen Repository hinzu.
 
-> `origin` = Origin ist eine gängige Benennung für das Remote Repository, oder genauer gesagt für die Verbindung zu Remote.
+> `origin` = "origin" ist eine gängige Benennung für das remote Repository, oder genauer gesagt für die Verbindung zu remote.
 
 > Ziel-Link = Da anfänglich nur vom lokalen Repository ausgegangen wird, muss ein Ziel angegeben werden.
 
@@ -76,13 +77,13 @@ git Remote add origin REPOSITORYLINK
 git branch -M main
 ```
 > `-M` (Move) erzwingt die Änderung, auch wenn Branch "main" schon existiert.
-#### -- Verbindung zum Remote herstellen 
+#### -- Verbindung zum remote herstellen 
 ```bash
 git push -u origin main
 ```
-> `-u` = setzt Upstream-Verbindung (von Local auf Remote) - dies bleibt von hier an die Default-Verbindung bei Push&Pull.
+> `-u` = setzt Upstream-Verbindung (von local auf remote) - dies bleibt von hier an die Default-Verbindung bei Push&Pull.
 
-> `origin` = (beliebiger, aber gängiger Name für) Verbindung zu Remote.
+> `origin` = (beliebiger, aber gängiger Name für) Verbindung zu remote.
 
 > `main` = Name des aktiven Branches.
 
@@ -90,20 +91,15 @@ git push -u origin main
 
 > -> Bei späteren Commits geht einfach nur `git push`
 
-### $${\text{\color{blue}Repository von Remote (GitHub) auf Local (PC) Herunterladen}}$$
+### $${\text{\color{blue}Repository von remote (GitHub) auf local (PC) Herunterladen}}$$
 
-#### -- (Wenn nicht lokal vorhanden) Repository von GitHub herunterladen und lokal erstellen -> ins Wunschverzeichnis hineinnavigieren
+#### -- (Wenn nicht lokal vorhanden) Repository von GitHub herunterladen und lokal erstellen -> vorher ins Wunschverzeichnis hineinnavigieren
 ```bash
 git clone REPOSITORYLINK
 ```
-> `clone` erstellt ein lokales Repository nach dem Vorbild des Remote, z.B. `git clone github.com/user/repository123`
+> `clone` erstellt ein lokales Repository nach dem Vorbild des remote, z.B. `git clone github.com/user/repository123`
 > Es wird im aktuell geöffneten Ordner ein neuer Ordner mit dem Repository-Namen erstellt.
-> Alternativ kann ein Zielordner angegeben werden, der zum Repository gemacht werden soll. 
-
-#### -- (Wenn lokal vorhanden) Repository von GitHub mit lokalem Repository synchronisieren (downstream)
-> Sofern noch kein Initial Commit stattgefunden hat, 
-
-#### -- 
+> Alternativ kann ein Zielordner angegeben werden, der zum Repository gemacht werden soll, z.B. `git clone REPOSITORYLINK NeuesRepository` (alternativ absoluter Pfad C:\...).
 
 ### $${\text{\color{blue}Verwaltungsbefehle}}$$
 
@@ -134,7 +130,6 @@ rmdir /s /q .git
 > q = ohne Bestätigung
 
 > git = \[Dateiordner]
-
 
 
 
