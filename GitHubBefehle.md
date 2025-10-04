@@ -68,7 +68,7 @@ git remote add origin REPOSITORYLINK
 
 > `add` = Fügt neue Verbindung zu einem lokalen Repository hinzu.
 
-> `origin` = "origin" ist eine gängige Benennung für das remote Repository, oder genauer gesagt für die Verbindung zu remote.
+> `origin` = "origin" ist eine gängige Benennung für die Verbindung zum remote Repository.
 
 > Ziel-Link = Da anfänglich nur vom lokalen Repository ausgegangen wird, muss ein Ziel angegeben werden.
 
@@ -131,6 +131,7 @@ rmdir /s /q .git
 > q = ohne Bestätigung
 
 > git = \[Dateiordner]
+
 
 
 
