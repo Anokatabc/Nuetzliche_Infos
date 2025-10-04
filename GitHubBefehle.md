@@ -93,7 +93,7 @@ git push -u origin main
 
 > -> Bei weiteren Updates/Uploads geht nun einfach nur `git push`
 
-### $${\text{\color{blue} D. Repository von remote (GitHub) auf local (PC) Herunterladen}}$$
+### $${\text{\color{blue} D. Repository von remote (GitHub) auf local (PC) herunterladen}}$$
 
 #### -- (Wenn nicht lokal vorhanden) Repository von GitHub herunterladen und lokal erstellen -> vorher ins Wunschverzeichnis hineinnavigieren
 ```bash
@@ -132,6 +132,7 @@ rmdir /s /q .git
 > q = ohne Bestätigung
 
 > git = \[Dateiordner]
+
 
 
 
