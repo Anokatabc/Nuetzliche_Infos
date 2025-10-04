@@ -19,7 +19,7 @@ git commit -m "Stand Commit: Projekt erstellt"
 ```bash
 git push
 ```
-> Ein Push lädt den Commit auf remote bzw. GitHub hoch.
+> Ein Push lädt den Commit auf remote bzw. GitHub hoch.<br>
 > Sofern es der erste Push überhaupt ist, am besten einmal Abschnitt C anschauen.
 
 #### -- Neuen Branch erstellen
@@ -131,6 +131,7 @@ rmdir /s /q .git
 > q = ohne Bestätigung
 
 > git = \[Dateiordner]
+
 
 
 
