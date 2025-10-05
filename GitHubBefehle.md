@@ -5,15 +5,14 @@
 ```bash
 git add .
 ```
-> Punkt `.` ist Wildcard für alle Unterordner. Alternativ lassen sich auch spezifische Ordnerpfade angeben.
+> Punkt `.` ist Wildcard für alle Unterordner. Alternativ lassen sich auch spezifische Ordnerpfade oder Dateien angeben -> `git add index.php`
 
 #### -- 2) <ins>Commit</ins> (in ".git" / im lokalen Repository speichern)--
 ```bash
-git commit -m "Stand Commit: Projekt erstellt"
+git commit -m "Stand Commit: Projekt erstellt // Initial Commit"
 ```
+> `-m` = message. Hiermit gibt man an, welche Veränderungen es seit dem letzten Commit gegeben hat.<br>
 > Der Commit selbst speichert den aktuellen Projektstand im lokalen Repository (d. h. im .git-Ordner).
-
-> `-m` = message. Angeben welche Veränderungen es seit dem letzten Commit gegeben hat.
 
 #### -- 3) <ins>Push</ins> (lokales Repository auf das remote Repository hochladen) --
 ```bash
@@ -26,21 +25,21 @@ git push
 ```bash
 git checkout -b BRANCHNAME
 ```
-> `-b` steht für Branch.
+> `-b` steht für Branch.<br>
 > Erstellt und wechselt zu einem neuen Branch mit dem angegebenen Namen. Alle seit dem letzten Commit vorgenommenen Änderungen werden auf diesen neuen Branch überschrieben. Der alte Branch verbleibt auf dem Stand des Commits.
 #### -- Aktiven Branch wechseln
 ```bash
 git checkout BRANCHNAME
 ```
-> Findet in der Regel nur in größeren Projekten Anwendung, um zwischen verschiedenen Bearbeitungsversionen oder Aufgabenbereichen zu wechseln.
+> Findet in der Regel nur in größeren Projekten Anwendung, um zwischen verschiedenen Bearbeitungsversionen oder Aufgabenbereichen zu wechseln.<br>
 > In modernen Projekten wird häufig auch `git switch BRANCHNAME` verwendet.
 
 #### -- Datei öffnen bzw. geöffnete Datei auf Commit-Stand zurücksetzen
 ```bash
 git checkout DATEINAME
 ```
-> z.B. `git checkout README.md`
-> Öffnet die angegebene Datei im remote Repository. Sollte diese Datei aktuell geöffnet sein, wird der Arbeitsbereich auf den Stand des letzten Commits zurückgesetzt.
+> z.B. `git checkout README.md`<br>
+> Lädt die angegebene Datei im local Repository. Sollte diese Datei aktuell geöffnet sein, wird der Arbeitsbereich auf den Stand des letzten Commits zurückgesetzt.
 
 ### $${\text{\color{blue} B. Navigation und Erstellung/Einrichtung}}$$
 
@@ -55,18 +54,16 @@ git rev-parse --show-toplevel
 ```bash
 git init
 ```
-> Initialisiert (erstellt) ein lokales Repository im aktuellen Verzeichnis. Alternativ lässt sich auch ein bestimmtes Verzeichnis hinter `init` angeben, z.B. `git init C:\Users\Projekte\NeuesRepository`
+> Initialisiert (erstellt) ein lokales Repository im aktuellen Verzeichnis (dieses wird zum local Repository).<br>
+> Alternativ lässt sich auch ein bestimmtes Verzeichnis hinter `init` angeben, z.B. `git init C:\Users\Projekte\NeuesRepository`
 
 #### -- Lokales Repository mit bestehendem Repository auf GitHub verbinden (nicht nötig nach `clone`) --
 ```bash
 git remote add origin REPOSITORYLINK
 ```
-> `remote` = (hier) GitHub, spricht remote Repository an. Z.B. `git remote add origin github.com/user/repository123`
-
-> `add` = Fügt neue Verbindung zu einem lokalen Repository hinzu.
-
-> `origin` = "origin" ist eine gängige Benennung für die Verbindung zum remote Repository.
-
+> `remote` = (hier) GitHub, spricht remote Repository an. Z.B. `git remote add origin github.com/user/repository123`<br>
+> `add` = Fügt neue Verbindung zu einem lokalen Repository hinzu.<br>
+> `origin` = "origin" ist eine gängige Benennung für die Verbindung zum remote Repository.<br>
 > Ziel-Link = Da anfänglich nur vom lokalen Repository ausgegangen wird, muss ein Ziel angegeben werden.
 
 ### $${\text{\color{blue} C. Einmalig bei dem ersten Push}}$$
@@ -82,7 +79,6 @@ git branch -M main
 git push -u origin main
 ```
 > Erfordert bestehenden Commit. Falls noch nicht geschehen -> `git add .` -> `git commit -m "Initial Commit (oder etwas anderes schreiben)"`<br>
->-> Alternativ 
 
 > `-u` = setzt Upstream-Verbindung (von local auf remote) - dies bleibt von hier an die Default-Verbindung bei Push&Pull.
 
@@ -126,10 +122,10 @@ git fetch
 ```bash
 git diff origin/main
 ```
->Hiermit lässt sich der aktuelle Arbeitsstand mit dem remote Repository vergleichen. Mit Pfeiltaste nach unten lässt sich Zeile für Zeile durch alle Änderungen durchgehen.
->Mit dem Befehl --no-pager kann das manuelle Scrollen umgangen werden und alle Änderungen werden komplett in die Konsole geprintet -> `git --no-pager diff origin/main`
+>Hiermit lässt sich der aktuelle Arbeitsstand mit dem remote Repository vergleichen. Mit Pfeiltaste nach unten lässt sich Zeile für Zeile durch alle Änderungen durchgehen.<br>
+>Mit dem Befehl --no-pager kann das manuelle Scrollen umgangen werden und alle Änderungen werden komplett in die Konsole geprintet -> `git --no-pager diff origin/main`<br>
 >Es kann auch eine konkrete Datei angegeben werden, die man abgleichen möchte -> `git diff origin/main -- index.php`
->
+
 #### -- (Später) log/merge
 ...
 
@@ -154,6 +150,7 @@ rmdir /s /q .git
 > q = ohne Bestätigung
 
 > git = \[Dateiordner]
+
 
 
 
