@@ -89,7 +89,7 @@ git push -u origin main
 
 > `main` = Name des aktiven Branches.
 
-> `-f` oder `--force` wenn man überschreiben möchte - dies könnte u. U. nötig sein falls Default-Einstellungen etwas blockieren.
+> `-f` oder `--force` wenn man überschreiben möchte - dies könnte u. U. nötig sein falls Default-Einstellungen etwas blockieren oder Konflikte bestehen (kann im Falle des Letzteren zu Verlusten führen, wenn man einfach überschreibt). <br>
 
 > -> Bei weiteren Updates/Uploads geht nun einfach nur `git push`
 
@@ -99,7 +99,7 @@ git push -u origin main
 ```bash
 git clone REPOSITORYLINK
 ```
-> `clone` erstellt ein lokales Repository nach dem Vorbild des remote, z.B. `git clone github.com/user/repository123`
+> `clone` erstellt ein lokales Repository nach dem Vorbild des remote, z.B. `git clone github.com/user/repository123`<br>
 > Es wird im aktuell geöffneten Ordner ein neuer Ordner mit dem Repository-Namen erstellt.
 > Alternativ kann ein Zielordner angegeben werden, der zum Repository gemacht werden soll, z.B. `git clone REPOSITORYLINK NeuesRepository` (alternativ absoluter Pfad C:\...).
 
@@ -132,6 +132,7 @@ rmdir /s /q .git
 > q = ohne Bestätigung
 
 > git = \[Dateiordner]
+
 
 
 
