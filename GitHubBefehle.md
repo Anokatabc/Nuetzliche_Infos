@@ -42,9 +42,6 @@ git checkout DATEINAME
 > z.B. `git checkout README.md`
 > Öffnet die angegebene Datei im remote Repository. Sollte diese Datei aktuell geöffnet sein, wird der Arbeitsbereich auf den Stand des letzten Commits zurückgesetzt.
 
-#### -- (Später) fetch, log und merge in Teamarbeit
-...
-
 ### $${\text{\color{blue} B. Navigation und Erstellung/Einrichtung}}$$
 
 #### -- Lokales Repository finden (wenn vorhanden) -> mit `cd` und `dir` im Terminal herumnavigieren --
@@ -79,10 +76,14 @@ git branch -M main
 ```
 > `-M` (Move) erzwingt die Änderung, auch wenn Branch "main" schon existiert.
 > Dies ist oft notwendig weil noch "master" als Default-Branch gesetzt ist, was nicht mehr genutzt wird.
-#### -- Verbindung zum remote herstellen 
+#### -- Verbindung zum remote auf Upstream setzen Option 1: Beim ersten Push
+><b>Upstream heißt: "Zu diesem remote Repository gehörst du".</b>
 ```bash
 git push -u origin main
 ```
+> Erfordert bestehenden Commit. Falls noch nicht geschehen -> `git add .` -> `git commit -m "Initial Commit (oder etwas anderes schreiben)"`<br>
+>-> Alternativ 
+
 > `-u` = setzt Upstream-Verbindung (von local auf remote) - dies bleibt von hier an die Default-Verbindung bei Push&Pull.
 
 > `origin` = Beliebiger, aber üblicher Name für die Verbindung zu remote (GitHub).
@@ -92,6 +93,12 @@ git push -u origin main
 > `-f` oder `--force` wenn man überschreiben möchte - dies könnte u. U. nötig sein falls Default-Einstellungen etwas blockieren oder Konflikte bestehen (kann im Falle des Letzteren zu Verlusten führen, wenn man einfach überschreibt). <br>
 
 > -> Bei weiteren Updates/Uploads geht nun einfach nur `git push`
+
+#### -- Verbindung zum remote herstellen Option 2: Separat setzen
+```bash
+git branch --set-upstream-to=origin/main
+```
+ >Eine Upstream-Verbindung muss gesetzt sein, damit `push`, `pull` und `fetch` einwandfrei funktionieren können.
 
 ### $${\text{\color{blue} D. Repository von remote (GitHub) auf local (PC) herunterladen}}$$
 
@@ -109,7 +116,22 @@ git clone REPOSITORYLINK
 ```bash
 git diff
 ```
-> Listet im Terminal alle Änderungen auf, die seit dem letzten Commit stattgefunden haben.
+Listet im Terminal alle Änderungen auf, die seit dem letzten Commit stattgefunden haben.
+
+#### -- fetch und mit remote vergleichen (diff origin/main)
+```bash
+git fetch
+```
+>Lädt den Stand des remote Repository in eine temporäre Tracking-Datei, damit man Stände vergleichen kann. Hierfür muss eine Upstream-Verbindung bestehen.
+```bash
+git diff origin/main
+```
+>Hiermit lässt sich der aktuelle Arbeitsstand mit dem remote Repository vergleichen. Mit Pfeiltaste nach unten lässt sich Zeile für Zeile durch alle Änderungen durchgehen.
+>Mit dem Befehl --no-pager kann das manuelle Scrollen umgangen werden und alle Änderungen werden komplett in die Konsole geprintet -> `git --no-pager diff origin/main`
+>Es kann auch eine konkrete Datei angegeben werden, die man abgleichen möchte -> `git diff origin/main -- index.php`
+>
+#### -- (Später) log/merge
+...
 
 #### -- Sehen was aktuell gestaged ist --
 ```bash
@@ -132,6 +154,7 @@ rmdir /s /q .git
 > q = ohne Bestätigung
 
 > git = \[Dateiordner]
+
 
 
 
