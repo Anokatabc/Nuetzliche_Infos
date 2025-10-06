@@ -1,3 +1,5 @@
+[Link zum Repository](https://www.github.com/Anokatabc/Nuetzliche_Infos)
+
 # Tipps & Tricks :)
 
 Im Laufe meiner Reise durch das Internet und die IT-Sphäre stoße ich hier und da auf praktische Hilfen oder auf intuitive Erklärungen, die mir sehr beim Verständnis helfen. Eventuell können die mitunter auch Anderen helfen.
