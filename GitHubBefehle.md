@@ -7,7 +7,7 @@ git add .
 ```
 > Punkt `.` ist Wildcard für alle Unterordner. Alternativ lassen sich auch spezifische Ordnerpfade oder Dateien angeben -> `git add index.php`
 
-#### -- 2) <ins>Commit</ins> (in ".git" / im lokalen Repository speichern)--
+#### -- 2) <ins>Commit</ins> (in ".git" / im lokalen Repository speichern) --
 ```bash
 git commit -m "Stand Commit: Projekt erstellt // Initial Commit"
 ```
@@ -21,12 +21,15 @@ git push
 > Ein Push lädt den Commit auf remote bzw. GitHub hoch.<br>
 > Sofern es der erste Push überhaupt ist, am besten einmal Abschnitt C anschauen.
 
+___
+
 #### -- Neuen Branch erstellen
 ```bash
 git checkout -b BRANCHNAME
 ```
 > `-b` steht für Branch.<br>
 > Erstellt und wechselt zu einem neuen Branch mit dem angegebenen Namen. Alle seit dem letzten Commit vorgenommenen Änderungen werden auf diesen neuen Branch überschrieben. Der alte Branch verbleibt auf dem Stand des Commits.
+
 #### -- Aktiven Branch wechseln
 ```bash
 git checkout BRANCHNAME
@@ -40,7 +43,7 @@ git checkout DATEINAME
 ```
 > z.B. `git checkout README.md`<br>
 > Lädt die angegebene Datei im local Repository. Sollte diese Datei aktuell geöffnet sein, wird der Arbeitsbereich auf den Stand des letzten Commits zurückgesetzt.
-
+___
 ### $${\text{\color{blue} B. Navigation und Erstellung/Einrichtung}}$$
 
 #### -- Lokales Repository finden (wenn vorhanden) -> mit `cd` und `dir` im Terminal herumnavigieren --
@@ -65,7 +68,7 @@ git remote add origin REPOSITORYLINK
 > `add` = Fügt neue Verbindung zu einem lokalen Repository hinzu.<br>
 > `origin` = "origin" ist eine gängige Benennung für die Verbindung zum remote Repository.<br>
 > Ziel-Link = Da anfänglich nur vom lokalen Repository ausgegangen wird, muss ein Ziel angegeben werden.
-
+___
 ### $${\text{\color{blue} C. Einmalig bei dem ersten Push}}$$
 #### -- Aktuellen Branch in "main" umbenennen. 
 ```bash
@@ -95,7 +98,7 @@ git push -u origin main
 git branch --set-upstream-to=origin/main
 ```
  >Eine Upstream-Verbindung muss gesetzt sein, damit `push`, `pull` und `fetch` einwandfrei funktionieren können.
-
+___
 ### $${\text{\color{blue} D. Repository von remote (GitHub) auf local (PC) herunterladen}}$$
 
 #### -- (Wenn nicht lokal vorhanden) Repository von GitHub herunterladen und lokal erstellen -> vorher ins Wunschverzeichnis hineinnavigieren
@@ -105,7 +108,7 @@ git clone REPOSITORYLINK
 > `clone` erstellt ein lokales Repository nach dem Vorbild des remote, z.B. `git clone github.com/user/repository123`<br>
 > Es wird im aktuell geöffneten Ordner ein neuer Ordner mit dem Repository-Namen erstellt.
 > Alternativ kann ein Zielordner angegeben werden, der zum Repository gemacht werden soll, z.B. `git clone REPOSITORYLINK NeuesRepository` (alternativ absoluter Pfad C:\...).
-
+___
 ### $${\text{\color{blue} E. Verwaltungsbefehle}}$$
 
 #### -- Änderungen seit letztem Commit prüfen --
@@ -145,11 +148,12 @@ git restore .
 ```bash
 rmdir /s /q .git
 ```
-> s = subdirectories
+> /s = subdirectories
 
-> q = ohne Bestätigung
+> /q = ohne Bestätigung
 
-> git = \[Dateiordner]
+> .git = Name des zu löschenden Ordners, hier `.git` bzw. das local Repository
+
 
 
 
