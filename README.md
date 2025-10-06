@@ -1,6 +1,6 @@
 # Tipps & Tricks :)
 
-Im Laufe meiner Erkundung der IT-Sphäre stoße ich hier und da auf praktische Hilfen oder auf intuitive Erklärungen, die mir sehr beim Verständnis helfen. Eventuell können die mitunter auch Anderen helfen.
+Im Laufe meiner Reise durch das Internet und die IT-Sphäre stoße ich hier und da auf praktische Hilfen oder auf intuitive Erklärungen, die mir sehr beim Verständnis helfen. Eventuell können die mitunter auch Anderen helfen.
 
 ### Zu Beginn ein paar weniger bekannte Tipps für GitHub-Markdown:<br>
 ___
