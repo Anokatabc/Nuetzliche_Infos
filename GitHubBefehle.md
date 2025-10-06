@@ -101,13 +101,22 @@ git branch --set-upstream-to=origin/main
 ___
 ### $${\text{\color{blue} D. Repository von remote (GitHub) auf local (PC) herunterladen}}$$
 
-#### -- (Wenn nicht lokal vorhanden) Repository von GitHub herunterladen und lokal erstellen -> vorher ins Wunschverzeichnis hineinnavigieren
+#### -- (Wenn nicht lokal vorhanden) -> in Elternordner hineinnavigieren
 ```bash
 git clone REPOSITORYLINK
 ```
 > `clone` erstellt ein lokales Repository nach dem Vorbild des remote, z.B. `git clone github.com/user/repository123`<br>
 > Es wird im aktuell geöffneten Ordner ein neuer Ordner mit dem Repository-Namen erstellt.
-> Alternativ kann ein Zielordner angegeben werden, der zum Repository gemacht werden soll, z.B. `git clone REPOSITORYLINK NeuesRepository` (alternativ absoluter Pfad C:\...).
+> Alternativ kann statt dem Repositorynamen ein Zielordner angegeben werden, der zum Repository gemacht werden soll, z.B. `git clone REPOSITORYLINK NeuesRepository` (alternativ absoluter Pfad C:\...). Falls nicht vorhanden, wird er mit dem angegebenen Namen erstellt.
+
+#### -- (Wenn lokal vorhanden, verbunden und Upstream gesetzt)
+```bash
+git pull
+```
+>Lädt den aktuellen Projektstand vom remote Repository (GitHub) herunter und aktualisiert das lokale Repository.<br>
+>Hintergründig werden *zwei* Git-Befehle ausgeführt:
+><br>`git fetch` (lädt aktuellen Projektstand in den Zwischenspeicher)
+><br>`git merge` (aktualisiert das lokale Repository)
 ___
 ### $${\text{\color{blue} E. Verwaltungsbefehle}}$$
 
@@ -153,6 +162,7 @@ rmdir /s /q .git
 > /q = ohne Bestätigung
 
 > .git = Name des zu löschenden Ordners, hier `.git` bzw. das local Repository
+
 
 
 
