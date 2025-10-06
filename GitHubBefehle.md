@@ -1,3 +1,4 @@
+<div dir="rtl">[Zurück zum Repository](https:www.github.com/Anokatabc/Nuetzliche_Infos)</div>
 ## $${\text{\color{blue}GitHub-Befehle (Übersicht)}}$$
 
 ### $${\text{\color{blue} A. Üblicher Upload-Workflow | 1) add (=Stage) -> 2) commit -> 3) push}}$$
@@ -162,6 +163,7 @@ rmdir /s /q .git
 > /q = ohne Bestätigung
 
 > .git = Name des zu löschenden Ordners, hier `.git` bzw. das local Repository
+
 
 
 
