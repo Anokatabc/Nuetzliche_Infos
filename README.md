@@ -3,15 +3,17 @@
 Im Laufe meiner Reise durch das Internet und die IT-Sphäre stoße ich hier und da auf praktische Hilfen oder auf intuitive Erklärungen, die mir sehr beim Verständnis helfen. Eventuell können die mitunter auch Anderen helfen.
 
 ## Übersicht
-- [GitHub-Guide](https://github.com/Anokatabc/Nuetzliche_Infos/blob/main/GitHubBefehle.md)
-
-
+Anleitungen|Beschreibung
+---|---
+|[1\) GitHub-Guide](https://github.com/Anokatabc/Nuetzliche_Infos/blob/main/GitHubBefehle.md)|Behandelt viele nützliche Informationen und Abläufe bei der Arbeit mit GitHub.
+|2|...
+|3|...
 
 ### Ein paar weniger bekannte Tipps für GitHub-Markdown:<br>
 ___
 ### Texthervorhebung
-`<sub>TEXT</sub>` -> <sub>TIEFGESTELLT (<b>sub</b>text)</sub><br>
-`<sup>TEXT</sup>` -> <sup>HOCHGESTELLT (<b>sup</b>ertext)</sup><br>
+`<sub>TEXT</sub>` -> <sub>TIEFGESTELLT</sub> (<b>sub</b>text)<br>
+`<sup>TEXT</sup>` -> <sup>HOCHGESTELLT</sup> (<b>sup</b>ertext)<br>
 `<ins>TEXT</ins>` -> <ins>UNTERSTRICHEN</ins><br>
 
 #### Einige klassische HTML-Tags lassen sich auch anwenden: <br>
