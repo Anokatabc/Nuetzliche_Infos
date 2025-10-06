@@ -1,5 +1,6 @@
-<div dir="rtl">[Zurück zum Repository](https:www.github.com/Anokatabc/Nuetzliche_Infos)</div>
-## $${\text{\color{blue}GitHub-Befehle (Übersicht)}}$$
+[\(Zurück zur Übersicht\)](https://www.github.com/Anokatabc/Nuetzliche_Infos)
+
+## $${\text{\color{blue}GitHub-Befehle (Überblick)}}$$
 
 ### $${\text{\color{blue} A. Üblicher Upload-Workflow | 1) add (=Stage) -> 2) commit -> 3) push}}$$
 #### -- 1) <ins>Add</ins> - Alle Unterordner "stagen" ("ready for commit") --
@@ -163,6 +164,7 @@ rmdir /s /q .git
 > /q = ohne Bestätigung
 
 > .git = Name des zu löschenden Ordners, hier `.git` bzw. das local Repository
+
 
 
 
