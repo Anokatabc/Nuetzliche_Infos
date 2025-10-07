@@ -22,8 +22,8 @@ ___
 `<b>Fett</b>` -> <b>Fett</b> (identisch mit `**Fett**` **Fett** oder auch `__Fett__` __Fett__)<br>
 `<i>Kursiv</i>` -> <i>Kursiv</i> (identisch mit `*Kursiv*` *Kursiv* oder auch `_Kursiv_` _Kursiv_)
 ___
-### $\color{red}LaTeX$
-(Latex wird leider nicht immer korrekt gerendert bzw. dargestellt)<br>
+$\Huge\color{red}LaTeX$<br>
+<sup>(Latex wird leider nicht immer korrekt gerendert bzw. dargestellt)<br></sup>
 `${\text{\color{blue}Gefärbter Text mittels LaTeX (Mathematik-Funktionen)}}$` -> ${\text{\color{blue}Gefärbter Text mittels LaTeX (Mathematik-Funktionen)}}$<br>
 
 Der `\text`-Tag ist notwendig für Textinhalte, da Latex per Default im Mathe-Modus ist und alle Leerstellen entfernt und einen unleserlichen Kursivdruck hat. Ohne würde es so aussehen: 
