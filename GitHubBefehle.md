@@ -1,6 +1,6 @@
 [\(Zurück zur Übersicht\)](https://www.github.com/Anokatabc/Nuetzliche_Infos)
 
-## $${\text{\color{blue}GitHub-Befehle (Überblick)}}$$
+## $${\Huge\text{\color{blue}GitHub-Befehle (Überblick)}}$$
 - [A. Workflow und Upload](https://github.com/Anokatabc/Nuetzliche_Infos/blob/main/GitHubBefehle.md#a-%C3%BCblicher-upload-workflow--1-add-stage---2-commit---3-push) - (add, commit, push, checkout)
 - [B. Mit Branches arbeiten](https://github.com/Anokatabc/Nuetzliche_Infos/blob/main/GitHubBefehle.md#b-mit-branches-arbeiten) - (checkout, merge, branch)
 - [C. Erste Einrichtung](https://github.com/Anokatabc/Nuetzliche_Infos/blob/main/GitHubBefehle.md#c-navigation-und-erstellungeinrichtung) - (init, branch, add origin)
@@ -215,6 +215,7 @@ rmdir /s /q .git
 >git remote -v
 > ```
 > >`-v` steht vermutlich für "verbose" und sagt einfach: Gib mir alles über das remote Repository, was du weißt.
+
 
 
 
