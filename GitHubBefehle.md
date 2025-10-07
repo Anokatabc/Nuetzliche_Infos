@@ -77,6 +77,7 @@ git remote add origin REPOSITORYLINK
 > Ziel-Link = Da anfänglich nur vom lokalen Repository ausgegangen wird, muss ein Ziel angegeben werden.
 ___
 ### <i><ins>C.</ins> Einmalig bei dem ersten Push</i>
+>Diese Befehle müssen nach Erstellung eines lokalen Repositories vor einem Pull/Push/Fetch ausgeführt werden (es sei denn es wurde via `clone` erstellt).
 #### -- Aktuellen Branch in "main" umbenennen. 
 ```bash
 git branch -M main
@@ -178,3 +179,10 @@ rmdir /s /q .git
 > /q = ohne Bestätigung
 
 > .git = Name des zu löschenden Ordners, hier `.git` bzw. das local Repository
+
+> #### -- Namen und Link des verbundenen remote Repositories herausfinden
+> ```bash
+>git remote -v
+> ```
+> >`-v` steht vermutlich für "verbose" und sagt einfach: Gib mir alles über das remote Repository, was du weißt.
+
