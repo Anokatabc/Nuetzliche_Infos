@@ -2,10 +2,11 @@
 
 ## $${\text{\color{blue}GitHub-Befehle (Überblick)}}$$
 - [A. Workflow und Upload](https://github.com/Anokatabc/Nuetzliche_Infos/blob/main/GitHubBefehle.md#a-%C3%BCblicher-upload-workflow--1-add-stage---2-commit---3-push) - (add, commit, push, checkout)
-- [B. Einrichtung](https://github.com/Anokatabc/Nuetzliche_Infos/blob/main/GitHubBefehle.md#b-navigation-und-erstellungeinrichtung) - (init, branch, add origin)
-- [C. Erster Push und Upstream](https://github.com/Anokatabc/Nuetzliche_Infos/blob/main/GitHubBefehle.md#c-einmalig-bei-dem-ersten-push) - (push, --set-upstream)
-- [D. Local updaten und herunterladen](https://github.com/Anokatabc/Nuetzliche_Infos/blob/main/GitHubBefehle.md#d-repository-von-remote-github-auf-local-pc-herunterladen) - (clone, pull, reset)
-- [E. Verwaltungsbefehle](https://github.com/Anokatabc/Nuetzliche_Infos/blob/main/GitHubBefehle.md#e-verwaltungsbefehle) - (diff, fetch, status, restore)
+- [B. Mit Branches arbeiten](https://github.com/Anokatabc/Nuetzliche_Infos/blob/main/GitHubBefehle.md#b-mit-branches-arbeiten) - (checkout, merge, branch)
+- [C. Erste Einrichtung](https://github.com/Anokatabc/Nuetzliche_Infos/blob/main/GitHubBefehle.md#c-navigation-und-erstellungeinrichtung) - (init, branch, add origin)
+- [D. Erster Push und Upstream](https://github.com/Anokatabc/Nuetzliche_Infos/blob/main/GitHubBefehle.md#d-einmalig-bei-dem-ersten-push) - (push, --set-upstream)
+- [E. Local updaten und herunterladen](https://github.com/Anokatabc/Nuetzliche_Infos/blob/main/GitHubBefehle.md#e-repository-von-remote-github-auf-local-pc-herunterladen) - (clone, pull, reset)
+- [F. Verwaltungsbefehle](https://github.com/Anokatabc/Nuetzliche_Infos/blob/main/GitHubBefehle.md#f-verwaltungsbefehle) - (diff, fetch, status, restore)
 
 ### <i><ins>A.</ins> Üblicher Upload-Workflow | 1) add (=Stage) -> 2) commit -> 3) push</i>
 #### 1) <ins>Add</ins> - Alle Unterordner "stagen" ("ready for commit")
@@ -29,13 +30,14 @@ git push
 > Sofern es der erste Push überhaupt ist, am besten einmal Abschnitt C anschauen.
 
 ___
-
+___
+### <i><ins>B.</ins> Mit Branches arbeiten</i>
 #### Neuen Branch erstellen
 ```bash
 git checkout -b BRANCHNAME
 ```
 > `-b` steht für Branch.<br>
-> Erstellt und wechselt zu einem neuen Branch mit dem angegebenen Namen. Alle seit dem letzten Commit vorgenommenen Änderungen werden auf diesen neuen Branch überschrieben. Der alte Branch verbleibt auf dem Stand des Commits.
+> Erstellt und wechselt zu einem neuen Branch mit dem angegebenen Namen. Alle seit dem letzten Commit vorgenommenen Änderungen werden von diesem neuen Branch übernommen/aufgenommen. Der alte Branch verbleibt auf dem Stand des letzten Commits.
 
 >Branches dienen der Gliederung eines Projekts in einzelne Schritte und/oder Versionen. Sobald die Ziele eines Branches erreicht sind, wird er in der Regel zurück in "main" eingegliedert. <br>
 >Man sollte normalerweise nur auf Branches Änderungen vornehmen und diese in main einspeisen. So erkennt man wenn Konflikte auftreten sollten und kann diese einzeln betrachten. 
@@ -53,8 +55,28 @@ git checkout DATEINAME
 ```
 > z.B. `git checkout README.md`<br>
 > Lädt die angegebene Datei im local Repository. Sollte diese Datei aktuell geöffnet sein, wird der Arbeitsbereich auf den Stand des letzten Commits zurückgesetzt.
+
+#### Fertigen Branch in `main` eingliedern und löschen
+>Man befindet sich aktuell auf einem Arbeitsbranch, hat gerade das Ziel des Branches (einen wesentlichen Entwicklungsschritt) erfüllt.<br>
+>Man findet den aktuellen Branch heraus mit `git branch` - Es gibt die optionalen Argumente `-a` (gibt alle local und remote Branches zurück) und `-r` (gibt remote Branches zurück).
+```bash
+git checkout main
+git pull
+git merge BRANCHNAME
+```
+>Man wechselt mit `checkout` zurück auf `main`, mit `pull` stellt man sicher, dass `main` mit remote synchronisiert ist. Mit `merge BRANCHNAME` fügt man nun den Branch in `main` ein.<br>
+>Als nächstes löscht man nach erfolgreicher Eingliederung üblicherweise den Branch, um das Projekt ordentlich zu halten.
+```bash
+git branch -d BRANCHNAME
+```
+>`-d` steht für "delete".<br>
+>Sofern der Branch auch auf remote existiert, sollte man ihn auch dort löschen:
+```bash
+git push origin --delete BRANCHNAME
+```
+>`push` dient nicht nur zum Hochladen von Dateien - hier gibt er lediglich eine Löschanweisung weiter (`delete`).
 ___
-### <i><ins>B.</ins> Navigation und Erstellung/Einrichtung</i>
+### <i><ins>C.</ins> Navigation und Erstellung/Einrichtung</i>
 
 #### Lokales Repository finden (wenn vorhanden) -> mit `cd` und `dir` im Terminal herumnavigieren
 ```bash
@@ -79,7 +101,7 @@ git remote add origin REPOSITORYLINK
 > `origin` = "origin" ist eine gängige Benennung für die Verbindung zum remote Repository.<br>
 > Ziel-Link = Da anfänglich nur vom lokalen Repository ausgegangen wird, muss ein Ziel angegeben werden.
 ___
-### <i><ins>C.</ins> Einmalig bei dem ersten Push</i>
+### <i><ins>D.</ins> Einmalig bei dem ersten Push</i>
 >Diese Befehle müssen nach Erstellung eines lokalen Repositories vor einem Pull/Push/Fetch ausgeführt werden (es sei denn es wurde via `clone` erstellt).
 #### Aktuellen Branch in "main" umbenennen. 
 ```bash
@@ -111,7 +133,7 @@ git branch --set-upstream-to=origin/main
  >Eine Upstream-Verbindung muss gesetzt sein, damit `push`, `pull` und `fetch` einwandfrei funktionieren können.<br>
  >Erfordert vorher `git branch -M main` und `git remote add origin LINK` - d. h. der lokale Branch `main` muss existieren und es muss eine Verbindung zu remote aufgebaut sein
 ___
-### <i><ins>D.</ins> Repository von remote (GitHub) auf local (PC) herunterladen</i>
+### <i><ins>E.</ins> Repository von remote (GitHub) auf local (PC) herunterladen</i>
 
 #### Wenn noch nicht lokal vorhanden -> in Elternordner hineinnavigieren
 ```bash
@@ -138,7 +160,7 @@ git reset --hard origin/main
 >Mit `fetch` den aktuellen Projektstand von GitHub/remote laden<br>
 >Anschließend mit `reset` alle lokalen Dateien durch remote überschreiben lassen. Der aktuelle Bearbeitungsstand geht dabei verloren.
 ___
-### <i><ins>E.</ins> Verwaltungsbefehle</i>
+### <i><ins>F.</ins> Verwaltungsbefehle</i>
 
 #### Änderungen seit letztem Commit prüfen
 ```bash
@@ -188,5 +210,3 @@ rmdir /s /q .git
 >git remote -v
 > ```
 > >`-v` steht vermutlich für "verbose" und sagt einfach: Gib mir alles über das remote Repository, was du weißt.
-
-
