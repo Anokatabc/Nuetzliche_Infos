@@ -1,4 +1,4 @@
-[\(Zurück zur Übersicht\)](https://www.github.com/Anokatabc/Nuetzliche_Infos)
+[\(Zurück zur Übersicht\)](https://www.github.com/Anokatabc/Nuetzliche_Infos)<br>
 
 ## $${\Huge\text{\color{blue}GitHub-Befehle (Überblick)}}$$
 - [A. Workflow und Upload](https://github.com/Anokatabc/Nuetzliche_Infos/blob/main/GitHubBefehle.md#a-%C3%BCblicher-upload-workflow--1-add-stage---2-commit---3-push) - (add, commit, push, checkout)
@@ -41,8 +41,8 @@ git checkout -b BRANCHNAME
 > `-b` steht für Branch.<br>
 > Erstellt und wechselt zu einem neuen Branch mit dem angegebenen Namen. Alle seit dem letzten Commit vorgenommenen Änderungen werden von diesem neuen Branch übernommen/aufgenommen. Der alte Branch verbleibt auf dem Stand des letzten Commits.
 
->Branches dienen der Gliederung eines Projekts in einzelne Schritte und/oder Versionen. Sobald die Ziele eines Branches erreicht sind, wird er in der Regel zurück in "main" eingegliedert. <br>
->Man sollte normalerweise nur auf Branches Änderungen vornehmen und diese in main einspeisen. So erkennt man wenn Konflikte auftreten sollten und kann diese einzeln betrachten. 
+>Branches dienen der Gliederung eines Projekts in einzelne Schritte und/oder Versionen. Sobald die Ziele eines Branches erreicht sind, wird er in der Regel zurück in `main` eingegliedert. <br>
+>Man sollte normalerweise nur auf Branches Änderungen vornehmen und diese in `main` einspeisen. So erkennt man wenn Konflikte auftreten sollten und kann diese einzeln betrachten. 
 
 #### Aktiven Branch wechseln
 ```bash
@@ -215,6 +215,7 @@ rmdir /s /q .git
 >git remote -v
 > ```
 > >`-v` steht vermutlich für "verbose" und sagt einfach: Gib mir alles über das remote Repository, was du weißt.
+
 
 
 
