@@ -1,11 +1,11 @@
 [\(Zurück zur Übersicht\)](https://www.github.com/Anokatabc/Nuetzliche_Infos)
 
 ## $${\text{\color{blue}GitHub-Befehle (Überblick)}}$$
-- [A.](https://github.com/Anokatabc/Nuetzliche_Infos/blob/main/GitHubBefehle.md#a-%C3%BCblicher-upload-workflow--1-add-stage---2-commit---3-push)
-- [B.](https://github.com/Anokatabc/Nuetzliche_Infos/blob/main/GitHubBefehle.md#b-navigation-und-erstellungeinrichtung)
-- [C.](https://github.com/Anokatabc/Nuetzliche_Infos/blob/main/GitHubBefehle.md#c-einmalig-bei-dem-ersten-push)
-- [D.](https://github.com/Anokatabc/Nuetzliche_Infos/blob/main/GitHubBefehle.md#d-repository-von-remote-github-auf-local-pc-herunterladen)
-- [E. Verwaltungsbefehle](https://github.com/Anokatabc/Nuetzliche_Infos/blob/main/GitHubBefehle.md#e-verwaltungsbefehle)
+- [A. Workflow und Upload](https://github.com/Anokatabc/Nuetzliche_Infos/blob/main/GitHubBefehle.md#a-%C3%BCblicher-upload-workflow--1-add-stage---2-commit---3-push) - (add, commit, push, checkout)
+- [B. Einrichtung](https://github.com/Anokatabc/Nuetzliche_Infos/blob/main/GitHubBefehle.md#b-navigation-und-erstellungeinrichtung) - (init, branch, add origin)
+- [C. Erster Push und Upstream](https://github.com/Anokatabc/Nuetzliche_Infos/blob/main/GitHubBefehle.md#c-einmalig-bei-dem-ersten-push) - (push, --set-upstream)
+- [D. Local updaten und herunterladen](https://github.com/Anokatabc/Nuetzliche_Infos/blob/main/GitHubBefehle.md#d-repository-von-remote-github-auf-local-pc-herunterladen) - (clone, pull, reset)
+- [E. Verwaltungsbefehle](https://github.com/Anokatabc/Nuetzliche_Infos/blob/main/GitHubBefehle.md#e-verwaltungsbefehle) - (diff, fetch, status, restore)
 
 ### <i><ins>A.</ins> Üblicher Upload-Workflow | 1) add (=Stage) -> 2) commit -> 3) push</i>
 #### -- 1) <ins>Add</ins> - Alle Unterordner "stagen" ("ready for commit") --
@@ -104,11 +104,12 @@ git push -u origin main
 ```bash
 git branch --set-upstream-to=origin/main
 ```
- >Eine Upstream-Verbindung muss gesetzt sein, damit `push`, `pull` und `fetch` einwandfrei funktionieren können.
+ >Eine Upstream-Verbindung muss gesetzt sein, damit `push`, `pull` und `fetch` einwandfrei funktionieren können.<br>
+ >Erfordert vorher `git branch -M main` und `git remote add origin LINK` - d. h. der lokale Branch `main` muss existieren und es muss eine Verbindung zu remote aufgebaut sein
 ___
 ### <i><ins>D.</ins> Repository von remote (GitHub) auf local (PC) herunterladen</i>
 
-#### -- (Wenn nicht lokal vorhanden) -> in Elternordner hineinnavigieren
+#### -- Wenn noch nicht lokal vorhanden -> in Elternordner hineinnavigieren
 ```bash
 git clone REPOSITORYLINK
 ```
@@ -116,7 +117,7 @@ git clone REPOSITORYLINK
 > Es wird im aktuell geöffneten Ordner ein neuer Ordner mit dem Repository-Namen erstellt.
 > Alternativ kann statt dem Repositorynamen ein Zielordner angegeben werden, der zum Repository gemacht werden soll, z.B. `git clone REPOSITORYLINK NeuesRepository` (alternativ absoluter Pfad C:\...). Falls nicht vorhanden, wird er mit dem angegebenen Namen erstellt.
 
-#### -- (Wenn lokal vorhanden, verbunden und Upstream gesetzt)
+#### -- Wenn lokal vorhanden, verbunden und Upstream gesetzt
 ```bash
 git pull
 ```
@@ -124,6 +125,14 @@ git pull
 >Hintergründig werden *zwei* Git-Befehle ausgeführt:
 ><br>`git fetch` (lädt aktuellen Projektstand in den Zwischenspeicher)
 ><br>`git merge` (aktualisiert das lokale Repository)
+
+#### -- Wenn lokal veraltet und überschrieben werden soll
+```bash
+git fetch
+git reset --hard origin/main
+```
+>Mit `fetch` den aktuellen Projektstand von GitHub/remote laden<br>
+>Anschließend mit `reset` alle lokalen Dateien durch remote überschreiben lassen. Der aktuelle Bearbeitungsstand geht dabei verloren.
 ___
 ### <i><ins>E.</ins> Verwaltungsbefehle</i>
 
@@ -169,7 +178,3 @@ rmdir /s /q .git
 > /q = ohne Bestätigung
 
 > .git = Name des zu löschenden Ordners, hier `.git` bzw. das local Repository
-
-
-
-
