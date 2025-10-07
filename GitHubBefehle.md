@@ -27,7 +27,7 @@ git commit -m "Stand Commit: Projekt erstellt // Initial Commit"
 git push
 ```
 > Ein Push lädt den Commit auf remote bzw. GitHub hoch.<br>
-> Sofern es der erste Push überhaupt ist, am besten einmal Abschnitt C anschauen.
+> Sofern es der erste Push überhaupt ist, am besten einmal Abschnitt D anschauen.
 
 ___
 ___
@@ -210,4 +210,5 @@ rmdir /s /q .git
 >git remote -v
 > ```
 > >`-v` steht vermutlich für "verbose" und sagt einfach: Gib mir alles über das remote Repository, was du weißt.
+
 
