@@ -7,7 +7,10 @@
 - [D. Erster Push und Verbindung (Upstream)](https://github.com/Anokatabc/Nuetzliche_Infos/blob/main/GitHubBefehle.md#d-einmalig-bei-dem-ersten-push) - (push, --set-upstream)
 - [E. Local updaten und herunterladen](https://github.com/Anokatabc/Nuetzliche_Infos/blob/main/GitHubBefehle.md#e-repository-von-remote-github-auf-local-pc-herunterladen) - (clone, pull, reset)
 - [F. Verwaltungsbefehle](https://github.com/Anokatabc/Nuetzliche_Infos/blob/main/GitHubBefehle.md#f-verwaltungsbefehle) - (diff, fetch, status, restore)
-
+___
+### Grundsätzliches
+- `Escape` funktioniert in der Konsole nicht immer, um aus Funktionen/Befehlen auszubrechen - manchmal ist die gefragte Taste `q` (Q). Z. B. nach `git diff` muss man mit `q` beenden.
+ ___
 ### <i><ins>A.</ins> Üblicher Upload-Workflow | 1) add (=Stage) -> 2) commit -> 3) push</i>
 #### 1) <ins>Add</ins> - Alle Unterordner "stagen" ("ready for commit")
 ```bash
@@ -134,7 +137,7 @@ git branch --set-upstream-to=origin/main
 ___
 ### <i><ins>E.</ins> Repository von remote (GitHub) auf local (PC) herunterladen</i>
 
-#### Wenn noch nicht lokal vorhanden -> in Elternordner hineinnavigieren
+#### Wenn noch nicht lokal vorhanden -> in gewünschten Elternordner hineinnavigieren
 ```bash
 git clone REPOSITORYLINK
 ```
@@ -151,7 +154,8 @@ git pull
 ><br>`git fetch` (lädt aktuellen Projektstand in den Zwischenspeicher)
 ><br>`git merge` (aktualisiert das lokale Repository)
 
-#### Wenn lokal veraltet und überschrieben werden soll
+#### Wenn lokal veraltet ist und komplett überschrieben werden soll 
+>Beispielsweise beim Hin- und Herwechseln zwischen Arbeitsgeräten.
 ```bash
 git fetch
 git reset --hard origin/main
@@ -165,7 +169,8 @@ ___
 ```bash
 git diff
 ```
-Listet im Terminal alle Änderungen auf, die seit dem letzten Commit stattgefunden haben.
+>Listet im Terminal alle Änderungen auf, die seit dem letzten Commit stattgefunden haben.<br>
+>Das heißt: Es vergleicht den aktuellen laufenden Bearbeitungsstand mit dem letzten Commit.
 
 #### fetch und mit remote vergleichen (diff origin/main)
 ```bash
@@ -176,17 +181,18 @@ git fetch
 git diff origin/main
 ```
 >Hiermit lässt sich der aktuelle Arbeitsstand mit dem remote Repository vergleichen. Mit Pfeiltaste nach unten lässt sich Zeile für Zeile durch alle Änderungen durchgehen.<br>
->Mit dem Befehl --no-pager kann das manuelle Scrollen umgangen werden und alle Änderungen werden komplett in die Konsole geprintet -> `git --no-pager diff origin/main`<br>
+>Mit dem Befehl `--no-pager` kann das manuelle Scrollen umgangen werden und alle Änderungen werden komplett in die Konsole geprintet -> `git --no-pager diff origin/main`<br>
 >Es kann auch eine konkrete Datei angegeben werden, die man abgleichen möchte -> `git diff origin/main -- index.php`
 
-#### (Später) log/merge
+#### (Später) log
 ...
 
 #### Sehen was aktuell gestaged ist
 ```bash
 git status
 ```
-> Listet aktuelle Inhalte im Stage auf.
+> Listet auf, welche Dateien aktuell im Stage Änderungen aufweisen.<br>
+> Um herauszufinden, was diese Änderungen (relativ zum lokalen Speicherstand bzw. letzten Commit) sind, gibt es `git diff --cached`
 
 #### Von .git Ordner wiederherstellen (Stand: Letzter Commit)
 ```bash
@@ -209,6 +215,7 @@ rmdir /s /q .git
 >git remote -v
 > ```
 > >`-v` steht vermutlich für "verbose" und sagt einfach: Gib mir alles über das remote Repository, was du weißt.
+
 
 
 
