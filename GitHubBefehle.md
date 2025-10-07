@@ -8,20 +8,20 @@
 - [E. Verwaltungsbefehle](https://github.com/Anokatabc/Nuetzliche_Infos/blob/main/GitHubBefehle.md#e-verwaltungsbefehle) - (diff, fetch, status, restore)
 
 ### <i><ins>A.</ins> Üblicher Upload-Workflow | 1) add (=Stage) -> 2) commit -> 3) push</i>
-#### -- 1) <ins>Add</ins> - Alle Unterordner "stagen" ("ready for commit") --
+#### 1) <ins>Add</ins> - Alle Unterordner "stagen" ("ready for commit")
 ```bash
 git add .
 ```
 > Punkt `.` ist Wildcard für alle Unterordner. Alternativ lassen sich auch spezifische Ordnerpfade oder Dateien angeben -> `git add index.php`
 
-#### -- 2) <ins>Commit</ins> (in ".git" / im lokalen Repository speichern) --
+#### 2) <ins>Commit</ins> (in ".git" / im lokalen Repository speichern)
 ```bash
 git commit -m "Stand Commit: Projekt erstellt // Initial Commit"
 ```
 > `-m` = message. Hiermit gibt man an, welche Veränderungen es seit dem letzten Commit gegeben hat.<br>
 > Der Commit selbst speichert den aktuellen Projektstand im lokalen Repository (d. h. im .git-Ordner).
 
-#### -- 3) <ins>Push</ins> (lokales Repository auf das remote Repository hochladen) --
+#### 3) <ins>Push</ins> (lokales Repository auf das remote Repository hochladen)
 ```bash
 git push
 ```
@@ -30,21 +30,24 @@ git push
 
 ___
 
-#### -- Neuen Branch erstellen
+#### Neuen Branch erstellen
 ```bash
 git checkout -b BRANCHNAME
 ```
 > `-b` steht für Branch.<br>
 > Erstellt und wechselt zu einem neuen Branch mit dem angegebenen Namen. Alle seit dem letzten Commit vorgenommenen Änderungen werden auf diesen neuen Branch überschrieben. Der alte Branch verbleibt auf dem Stand des Commits.
 
-#### -- Aktiven Branch wechseln
+>Branches dienen der Gliederung eines Projekts in einzelne Schritte und/oder Versionen. Sobald die Ziele eines Branches erreicht sind, wird er in der Regel zurück in "main" eingegliedert. <br>
+>Man sollte normalerweise nur auf Branches Änderungen vornehmen und diese in main einspeisen. So erkennt man wenn Konflikte auftreten sollten und kann diese einzeln betrachten. 
+
+#### Aktiven Branch wechseln
 ```bash
 git checkout BRANCHNAME
 ```
 > Findet in der Regel nur in größeren Projekten Anwendung, um zwischen verschiedenen Bearbeitungsversionen oder Aufgabenbereichen zu wechseln.<br>
 > In modernen Projekten wird häufig auch `git switch BRANCHNAME` verwendet.
 
-#### -- Datei öffnen bzw. geöffnete Datei auf Commit-Stand zurücksetzen
+#### Datei öffnen bzw. geöffnete Datei auf Commit-Stand zurücksetzen
 ```bash
 git checkout DATEINAME
 ```
@@ -53,21 +56,21 @@ git checkout DATEINAME
 ___
 ### <i><ins>B.</ins> Navigation und Erstellung/Einrichtung</i>
 
-#### -- Lokales Repository finden (wenn vorhanden) -> mit `cd` und `dir` im Terminal herumnavigieren --
+#### Lokales Repository finden (wenn vorhanden) -> mit `cd` und `dir` im Terminal herumnavigieren
 ```bash
 git rev-parse --show-toplevel
 ```
 > Ermittelt von einem Kindelement aus (aufwärts) den Ordner, der als Repository markiert ist.<br>
 > Das ist der Ordner, in welchem ".git" liegt. Der ist im normalen Datei-Explorer standardmäßig versteckt.
 
-#### -- Lokales Repository erstellen (initialisieren) -> erst in Wunschverzeichnis hineinnavigieren --
+#### Lokales Repository erstellen (initialisieren) -> erst in Wunschverzeichnis hineinnavigieren
 ```bash
 git init
 ```
 > Initialisiert (erstellt) ein lokales Repository im aktuellen Verzeichnis (dieses wird zum local Repository).<br>
 > Alternativ lässt sich auch ein bestimmtes Verzeichnis hinter `init` angeben, z.B. `git init C:\Users\Projekte\NeuesRepository`
 
-#### -- Lokales Repository mit bestehendem Repository auf GitHub verbinden (nicht nötig nach `clone`) --
+#### Lokales Repository mit bestehendem Repository auf GitHub verbinden (nicht nötig nach `clone`)
 ```bash
 git remote add origin REPOSITORYLINK
 ```
@@ -78,13 +81,13 @@ git remote add origin REPOSITORYLINK
 ___
 ### <i><ins>C.</ins> Einmalig bei dem ersten Push</i>
 >Diese Befehle müssen nach Erstellung eines lokalen Repositories vor einem Pull/Push/Fetch ausgeführt werden (es sei denn es wurde via `clone` erstellt).
-#### -- Aktuellen Branch in "main" umbenennen. 
+#### Aktuellen Branch in "main" umbenennen. 
 ```bash
 git branch -M main
 ```
 > `-M` (Move) erzwingt die Änderung, auch wenn Branch "main" schon existiert.
 > Dies ist oft notwendig weil noch "master" als Default-Branch gesetzt ist, was nicht mehr genutzt wird.
-#### -- Verbindung zum remote auf Upstream setzen Option 1: Beim ersten Push
+#### Verbindung zum remote auf Upstream setzen Option 1: Beim ersten Push
 ><b>Upstream heißt: "Zu diesem remote Repository gehörst du".</b>
 ```bash
 git push -u origin main
@@ -101,7 +104,7 @@ git push -u origin main
 
 > -> Bei weiteren Updates/Uploads geht nun einfach nur `git push`
 
-#### -- Verbindung zum remote herstellen Option 2: Separat setzen
+#### Verbindung zum remote herstellen Option 2: Separat setzen
 ```bash
 git branch --set-upstream-to=origin/main
 ```
@@ -110,7 +113,7 @@ git branch --set-upstream-to=origin/main
 ___
 ### <i><ins>D.</ins> Repository von remote (GitHub) auf local (PC) herunterladen</i>
 
-#### -- Wenn noch nicht lokal vorhanden -> in Elternordner hineinnavigieren
+#### Wenn noch nicht lokal vorhanden -> in Elternordner hineinnavigieren
 ```bash
 git clone REPOSITORYLINK
 ```
@@ -118,7 +121,7 @@ git clone REPOSITORYLINK
 > Es wird im aktuell geöffneten Ordner ein neuer Ordner mit dem Repository-Namen erstellt.
 > Alternativ kann statt dem Repositorynamen ein Zielordner angegeben werden, der zum Repository gemacht werden soll, z.B. `git clone REPOSITORYLINK NeuesRepository` (alternativ absoluter Pfad C:\...). Falls nicht vorhanden, wird er mit dem angegebenen Namen erstellt.
 
-#### -- Wenn lokal vorhanden, verbunden und Upstream gesetzt
+#### Wenn lokal vorhanden, verbunden und Upstream gesetzt
 ```bash
 git pull
 ```
@@ -127,7 +130,7 @@ git pull
 ><br>`git fetch` (lädt aktuellen Projektstand in den Zwischenspeicher)
 ><br>`git merge` (aktualisiert das lokale Repository)
 
-#### -- Wenn lokal veraltet und überschrieben werden soll
+#### Wenn lokal veraltet und überschrieben werden soll
 ```bash
 git fetch
 git reset --hard origin/main
@@ -137,13 +140,13 @@ git reset --hard origin/main
 ___
 ### <i><ins>E.</ins> Verwaltungsbefehle</i>
 
-#### -- Änderungen seit letztem Commit prüfen --
+#### Änderungen seit letztem Commit prüfen
 ```bash
 git diff
 ```
 Listet im Terminal alle Änderungen auf, die seit dem letzten Commit stattgefunden haben.
 
-#### -- fetch und mit remote vergleichen (diff origin/main)
+#### fetch und mit remote vergleichen (diff origin/main)
 ```bash
 git fetch
 ```
@@ -155,22 +158,22 @@ git diff origin/main
 >Mit dem Befehl --no-pager kann das manuelle Scrollen umgangen werden und alle Änderungen werden komplett in die Konsole geprintet -> `git --no-pager diff origin/main`<br>
 >Es kann auch eine konkrete Datei angegeben werden, die man abgleichen möchte -> `git diff origin/main -- index.php`
 
-#### -- (Später) log/merge
+#### (Später) log/merge
 ...
 
-#### -- Sehen was aktuell gestaged ist --
+#### Sehen was aktuell gestaged ist
 ```bash
 git status
 ```
 > Listet aktuelle Inhalte im Stage auf.
 
-#### -- Von .git Ordner wiederherstellen (Stand: Letzter Commit) --
+#### Von .git Ordner wiederherstellen (Stand: Letzter Commit)
 ```bash
 git restore .
 ```
 > Stellt Ordnerstruktur aus dem gespeicherten Repository in .git wiederher. Dazu muss kein lokales Repository bestehen - es wird nur der Ordner benötigt.
 
-#### -- Lokales Repository (unter Windows) löschen -> erst hineinnavigieren --
+#### Lokales Repository (unter Windows) löschen -> erst hineinnavigieren
 ```bash
 rmdir /s /q .git
 ```
@@ -180,9 +183,10 @@ rmdir /s /q .git
 
 > .git = Name des zu löschenden Ordners, hier `.git` bzw. das local Repository
 
-> #### -- Namen und Link des verbundenen remote Repositories herausfinden
+#### Namen und Link des verbundenen remote Repositories herausfinden
 > ```bash
 >git remote -v
 > ```
 > >`-v` steht vermutlich für "verbose" und sagt einfach: Gib mir alles über das remote Repository, was du weißt.
+
 
