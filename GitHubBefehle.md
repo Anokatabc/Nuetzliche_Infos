@@ -2,7 +2,9 @@
 
 ## $${\text{\color{blue}GitHub-Befehle (Überblick)}}$$
 
-### $${\text{\color{blue} A. Üblicher Upload-Workflow | 1) add (=Stage) -> 2) commit -> 3) push}}$$
+[Zu E](#E)
+
+### <i><ins>A.</ins> Üblicher Upload-Workflow | 1) add (=Stage) -> 2) commit -> 3) push</i>
 #### -- 1) <ins>Add</ins> - Alle Unterordner "stagen" ("ready for commit") --
 ```bash
 git add .
@@ -46,7 +48,7 @@ git checkout DATEINAME
 > z.B. `git checkout README.md`<br>
 > Lädt die angegebene Datei im local Repository. Sollte diese Datei aktuell geöffnet sein, wird der Arbeitsbereich auf den Stand des letzten Commits zurückgesetzt.
 ___
-### $${\text{\color{blue} B. Navigation und Erstellung/Einrichtung}}$$
+### <i><ins>B.</ins> Navigation und Erstellung/Einrichtung</i>
 
 #### -- Lokales Repository finden (wenn vorhanden) -> mit `cd` und `dir` im Terminal herumnavigieren --
 ```bash
@@ -71,7 +73,7 @@ git remote add origin REPOSITORYLINK
 > `origin` = "origin" ist eine gängige Benennung für die Verbindung zum remote Repository.<br>
 > Ziel-Link = Da anfänglich nur vom lokalen Repository ausgegangen wird, muss ein Ziel angegeben werden.
 ___
-### $${\text{\color{blue} C. Einmalig bei dem ersten Push}}$$
+### <i><ins>C.</ins> Einmalig bei dem ersten Push</i>
 #### -- Aktuellen Branch in "main" umbenennen. 
 ```bash
 git branch -M main
@@ -101,7 +103,7 @@ git branch --set-upstream-to=origin/main
 ```
  >Eine Upstream-Verbindung muss gesetzt sein, damit `push`, `pull` und `fetch` einwandfrei funktionieren können.
 ___
-### $${\text{\color{blue} D. Repository von remote (GitHub) auf local (PC) herunterladen}}$$
+### <i><ins>D.</ins> Repository von remote (GitHub) auf local (PC) herunterladen</i>
 
 #### -- (Wenn nicht lokal vorhanden) -> in Elternordner hineinnavigieren
 ```bash
@@ -120,7 +122,7 @@ git pull
 ><br>`git fetch` (lädt aktuellen Projektstand in den Zwischenspeicher)
 ><br>`git merge` (aktualisiert das lokale Repository)
 ___
-### $${\text{\color{blue} E. Verwaltungsbefehle}}$$
+### <p id="E"><i><ins>[E].</ins> Verwaltungsbefehle</i></p>
 
 #### -- Änderungen seit letztem Commit prüfen --
 ```bash
@@ -164,28 +166,3 @@ rmdir /s /q .git
 > /q = ohne Bestätigung
 
 > .git = Name des zu löschenden Ordners, hier `.git` bzw. das local Repository
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
