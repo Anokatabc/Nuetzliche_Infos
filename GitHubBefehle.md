@@ -1,8 +1,8 @@
 [\(Zurück zur Übersicht\)](https://www.github.com/Anokatabc/Nuetzliche_Infos)
 
 ## $${\text{\color{blue}GitHub-Befehle (Überblick)}}$$
-
-[Zu E](#E)
+- [A. Üblicher Upload-Workflow](https://github.com/Anokatabc/Nuetzliche_Infos/edit/main/GitHubBefehle.md#a-%C3%BCblicher-upload-workflow--1-add-stage---2-commit---3-push)
+- [E. Verwaltungsbefehle](https://github.com/Anokatabc/Nuetzliche_Infos/edit/main/GitHubBefehle.md#e-verwaltungsbefehle)
 
 ### <i><ins>A.</ins> Üblicher Upload-Workflow | 1) add (=Stage) -> 2) commit -> 3) push</i>
 #### -- 1) <ins>Add</ins> - Alle Unterordner "stagen" ("ready for commit") --
@@ -122,7 +122,7 @@ git pull
 ><br>`git fetch` (lädt aktuellen Projektstand in den Zwischenspeicher)
 ><br>`git merge` (aktualisiert das lokale Repository)
 ___
-### <p id="E"><i><ins>[E].</ins> Verwaltungsbefehle</i></p>
+### <i><ins>E.</ins> Verwaltungsbefehle</i>
 
 #### -- Änderungen seit letztem Commit prüfen --
 ```bash
@@ -166,3 +166,4 @@ rmdir /s /q .git
 > /q = ohne Bestätigung
 
 > .git = Name des zu löschenden Ordners, hier `.git` bzw. das local Repository
+
