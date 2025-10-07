@@ -30,7 +30,6 @@ git push
 > Sofern es der erste Push überhaupt ist, am besten einmal Abschnitt D anschauen.
 
 ___
-___
 ### <i><ins>B.</ins> Mit Branches arbeiten</i>
 #### Neuen Branch erstellen
 ```bash
@@ -102,14 +101,14 @@ git remote add origin REPOSITORYLINK
 > Ziel-Link = Da anfänglich nur vom lokalen Repository ausgegangen wird, muss ein Ziel angegeben werden.
 ___
 ### <i><ins>D.</ins> Einmalig bei dem ersten Push</i>
->Diese Befehle müssen nach Erstellung eines lokalen Repositories vor einem Pull/Push/Fetch ausgeführt werden (es sei denn es wurde via `clone` erstellt).
+>Die nachfolgenden Befehle müssen nach Erstellung eines lokalen Repositories und vor dem ersten Pull/Push/Fetch ausgeführt werden (es sei denn es wurde via `clone` erstellt).
 #### Aktuellen Branch in "main" umbenennen. 
 ```bash
 git branch -M main
 ```
 > `-M` (Move) erzwingt die Änderung, auch wenn Branch "main" schon existiert.
 > Dies ist oft notwendig weil noch "master" als Default-Branch gesetzt ist, was nicht mehr genutzt wird.
-#### Verbindung zum remote auf Upstream setzen Option 1: Beim ersten Push
+#### Verbindung zum remote auf Upstream setzen Option 1: Zusammen mit dem ersten Push
 ><b>Upstream heißt: "Zu diesem remote Repository gehörst du".</b>
 ```bash
 git push -u origin main
@@ -126,12 +125,12 @@ git push -u origin main
 
 > -> Bei weiteren Updates/Uploads geht nun einfach nur `git push`
 
-#### Verbindung zum remote herstellen Option 2: Separat setzen
+#### Verbindung zum remote herstellen Option 2: Separat setzen (ohne Push)
 ```bash
 git branch --set-upstream-to=origin/main
 ```
  >Eine Upstream-Verbindung muss gesetzt sein, damit `push`, `pull` und `fetch` einwandfrei funktionieren können.<br>
- >Erfordert vorher `git branch -M main` und `git remote add origin LINK` - d. h. der lokale Branch `main` muss existieren und es muss eine Verbindung zu remote aufgebaut sein
+ >Erfordert vorher `git branch -M main` und `git remote add origin REPOSITORYLINK` - d. h. der lokale Branch `main` muss existieren und es muss eine Verbindung zu remote aufgebaut sein
 ___
 ### <i><ins>E.</ins> Repository von remote (GitHub) auf local (PC) herunterladen</i>
 
@@ -210,5 +209,6 @@ rmdir /s /q .git
 >git remote -v
 > ```
 > >`-v` steht vermutlich für "verbose" und sagt einfach: Gib mir alles über das remote Repository, was du weißt.
+
 
 
