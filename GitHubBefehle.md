@@ -67,16 +67,23 @@ git checkout DATEINAME
 > z.B. `git checkout README.md`<br>
 > Lädt die angegebene Datei im local Repository. Sollte diese Datei aktuell geöffnet sein, wird der Arbeitsbereich auf den Stand des letzten Commits zurückgesetzt.
 
+#### Aktuellen Branch herausfinden
+```bash
+git branch
+```
+>Gibt alle existierenden lokalen Branches in der Konsole aus.
+><br>Parameter `-a` gibt alle lokalen und remote Branches aus.
+><br>Parameter `-r` gibt nur remote Branches aus.
+
 #### Fertigen Branch in `main` eingliedern und löschen
 >Situation: Man befindet sich aktuell auf einem Arbeitsbranch, hat gerade das Ziel des Branches (einen wesentlichen Entwicklungsschritt) erfüllt.<br>
->Man findet den aktuellen Branch heraus mit `git branch` - Es gibt die optionalen Argumente `-a` (gibt alle local und remote Branches zurück) und `-r` (gibt remote Branches zurück).
 ```bash
 git checkout main
 git pull
 git merge BRANCHNAME
 ```
 >Man wechselt mit `checkout` zurück auf `main`, mit `pull` stellt man sicher, dass `main` mit remote synchronisiert ist. Mit `merge BRANCHNAME` fügt man nun den Branch in `main` ein.<br>
->Als nächstes löscht man nach erfolgreicher Eingliederung üblicherweise den Branch, um das Projekt ordentlich zu halten.
+>Als nächstes löscht man nach erfolgreicher Eingliederung üblicherweise den Branch, um das Projekt ordentlich zu halten:
 ```bash
 git branch -d BRANCHNAME
 ```
@@ -224,6 +231,7 @@ rmdir /s /q .git
 >git remote -v
 > ```
 >`-v` steht vermutlich für "verbose" und sagt einfach: Gib mir alles über das remote Repository, was du weißt.
+
 
 
 
