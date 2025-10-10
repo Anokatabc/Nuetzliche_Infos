@@ -16,7 +16,7 @@ ___
 ### Texthervorhebung
 `<sub>TEXT</sub>` -> <sub>TIEFGESTELLT</sub> (<b>sub</b>text)<br>
 `<sup>TEXT</sup>` -> <sup>HOCHGESTELLT</sup> (<b>sup</b>ertext)<br>
-`<ins>TEXT</ins>` -> <ins>UNTERSTRICHEN</ins><br>
+`<ins>TEXT</ins>` -> <ins>UNTERSTRICHEN</ins> (kommt offenbar von **insert**, da es mal gängig war eingefügte Kommentare/Korrekturen zu unterstreichen)<br>
 
 #### Einige klassische HTML-Tags lassen sich auch anwenden: <br>
 `<b>Fett</b>` -> <b>Fett</b> (identisch mit `**Fett**` **Fett** oder auch `__Fett__` __Fett__)<br>
