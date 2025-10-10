@@ -68,7 +68,7 @@ git checkout DATEINAME
 > Lädt die angegebene Datei im local Repository. Sollte diese Datei aktuell geöffnet sein, wird der Arbeitsbereich auf den Stand des letzten Commits zurückgesetzt.
 
 #### Fertigen Branch in `main` eingliedern und löschen
->Man befindet sich aktuell auf einem Arbeitsbranch, hat gerade das Ziel des Branches (einen wesentlichen Entwicklungsschritt) erfüllt.<br>
+>Situation: Man befindet sich aktuell auf einem Arbeitsbranch, hat gerade das Ziel des Branches (einen wesentlichen Entwicklungsschritt) erfüllt.<br>
 >Man findet den aktuellen Branch heraus mit `git branch` - Es gibt die optionalen Argumente `-a` (gibt alle local und remote Branches zurück) und `-r` (gibt remote Branches zurück).
 ```bash
 git checkout main
@@ -224,6 +224,7 @@ rmdir /s /q .git
 >git remote -v
 > ```
 >`-v` steht vermutlich für "verbose" und sagt einfach: Gib mir alles über das remote Repository, was du weißt.
+
 
 
 
