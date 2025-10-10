@@ -9,10 +9,15 @@
 - [F. Verwaltungsbefehle](https://github.com/Anokatabc/Nuetzliche_Infos/blob/main/GitHubBefehle.md#f-verwaltungsbefehle) - (diff, fetch, status, restore)
 ___
 ### Grundsätzliches
-- Diese Übersicht behandelt hoffentlich alle wichtigsten und gängigsten Arbeitsweisen mit Git. Diese Befehle werden über das Terminal ausgeführt - entweder über den Windows Command Prompt ({Windows}+R und `cmd` eingeben), oder über das eingebaute Terminal in IDEs wie Visual Studio Code (`Toggle Panel` rechts oben <img width="18" height="22" alt="image" src="https://github.com/user-attachments/assets/7d839aec-35bd-490b-89c1-e294e0e25623" />
+- Diese Übersicht behandelt hoffentlich alle wichtigsten und gängigsten Arbeitsweisen mit Git. Diese Befehle werden über das Terminal ausgeführt - entweder über den Windows Command Prompt ( {Windows}+R und `cmd` eingeben), oder über das eingebaute Terminal in IDEs wie Visual Studio Code (`Toggle Panel` rechts oben <img width="18" height="22" alt="image" src="https://github.com/user-attachments/assets/7d839aec-35bd-490b-89c1-e294e0e25623" />
 ).
-- Tipps zur Navigation über das Terminal: `dir` listet alle verfügbaren Ordner im aktuell ausgewählten Ordner auf. Mit `cd [Ordnername]` öffnet man diesen Pfad. Man kann den Anfang eines Ordnernamens schreiben und mit der Tabulator-Taste auto-vervollständigen lassen. Z.B. wird `cd pr` -> {Tab} -> zu `cd Projekte` vervollständigt, wenn dieser Ordner existiert. Mit `cd ..` navigiert man aus einem Ordner heraus. Über den Datei-Explorer lässt sich der aktuelle Ordnerpfad einfach anklicken und mit `strg+C` zwischenspeichern, dann im Terminal einfügen mit `cd {strg+V}` und so ist man direkt im gewünschten Verzeichnis.
-- Mit `tree` lässt sich die gesamte Unterordnerstruktur auflisten. Parameter `tree /F` schließt auch nicht-Ordnerdateien in der Auflistung mit ein. `tree > beliebigerName.txt` gibt den Tree nicht in der Konsole aus, sondern speichert ihn stattdessen im aktuell geöffneten Ordner als Textdabei ab - falls man ihn z. B. weiterkommunizieren oder mit strg+F durchsuchen möchte.
+- <b>Tipps zur Navigation über das Terminal:</b>
+<br>**1)** `dir` listet alle verfügbaren Ordner im aktuell ausgewählten Ordner auf.
+<br>**2)** Mit `cd [Ordnername]` öffnet man diesen Pfad.
+<br>**3)** Man kann den Anfang eines Ordnernamens schreiben und mit der Tabulator-Taste auto-vervollständigen lassen. Z.B. wird `cd pr` -> {Tab} -> zu `cd Projekte` vervollständigt, wenn dieser Ordner existiert.
+<br>**4)** Mit `cd ..` navigiert man aus einem Ordner heraus.
+<br>**5)** Über den Datei-Explorer lässt sich der aktuelle Ordnerpfad einfach anklicken und mit `strg+C` zwischenspeichern, dann im Terminal einfügen mit `cd {strg+V}` und so ist man direkt im gewünschten Verzeichnis.
+<br>**6)** Mit `tree` lässt sich die gesamte Unterordnerstruktur auflisten. Parameter `tree /F` schließt auch nicht-Ordnerdateien in der Auflistung mit ein. `tree > beliebigerName.txt` gibt den Tree nicht in der Konsole aus, sondern speichert ihn stattdessen im aktuell geöffneten Ordner als Textdabei ab - falls man ihn z. B. weiterkommunizieren oder mit strg+F durchsuchen möchte.
 - `Escape` funktioniert in der Konsole nicht immer, um aus Funktionen/Befehlen auszubrechen - manchmal ist die gefragte Taste `q` (Q). Z. B. nach `git diff` muss man mit `q` beenden.
  ___
 ### <i><ins>A.</ins> Üblicher Upload-Workflow | 1) add (=Stage) -> 2) commit -> 3) push</i>
@@ -219,6 +224,7 @@ rmdir /s /q .git
 >git remote -v
 > ```
 >`-v` steht vermutlich für "verbose" und sagt einfach: Gib mir alles über das remote Repository, was du weißt.
+
 
 
 
