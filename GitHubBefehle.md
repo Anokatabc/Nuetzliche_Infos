@@ -157,10 +157,10 @@ git pull
 #### Wenn lokal veraltet ist und komplett überschrieben werden soll 
 >Beispielsweise beim Hin- und Herwechseln zwischen Arbeitsgeräten.
 ```bash
-git fetch
+git fetch origin
 git reset --hard origin/main
 ```
->Mit `fetch` den aktuellen Projektstand von GitHub/remote laden<br>
+>Mit `fetch origin` den aktuellen Projektstand von GitHub/remote laden. Ohne `origin` würde es auch funktionieren, aber könnte u. U. mehr holen als man möchte, wenn man mit mehreren Remotes verbunden sein sollte.<br>
 >Anschließend mit `reset` alle lokalen Dateien durch remote überschreiben lassen. Der aktuelle Bearbeitungsstand geht dabei verloren.
 ___
 ### <i><ins>F.</ins> Verwaltungsbefehle</i>
@@ -215,6 +215,7 @@ rmdir /s /q .git
 >git remote -v
 > ```
 > >`-v` steht vermutlich für "verbose" und sagt einfach: Gib mir alles über das remote Repository, was du weißt.
+
 
 
 
