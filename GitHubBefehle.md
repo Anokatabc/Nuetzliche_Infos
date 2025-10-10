@@ -83,7 +83,7 @@ git pull
 git merge BRANCHNAME
 ```
 >Man wechselt mit `checkout` zurück auf `main`, mit `pull` stellt man sicher, dass `main` mit remote synchronisiert ist. Mit `merge BRANCHNAME` fügt man nun den Branch in `main` ein.<br>
->Als nächstes löscht man nach erfolgreicher Eingliederung üblicherweise den Branch, um das Projekt ordentlich zu halten:
+>Sofern keine Merge-Konflikte auftreten, löscht man nach erfolgreicher Eingliederung üblicherweise den Branch, um das Projekt ordentlich zu halten:
 ```bash
 git branch -d BRANCHNAME
 ```
@@ -92,7 +92,7 @@ git branch -d BRANCHNAME
 ```bash
 git push origin --delete BRANCHNAME
 ```
->`push` dient nicht nur zum Hochladen von Dateien - hier gibt er lediglich eine Löschanweisung weiter (`delete`).
+>`push` dient nicht nur zum Hochladen von Dateien - hier gibt er lediglich eine Löschanweisung weiter (`delete`). So löscht man den Branch auch auf GitHub.
 ___
 ### <i><ins>C.</ins> Navigation und Erstellung/Einrichtung</i>
 
@@ -231,6 +231,7 @@ rmdir /s /q .git
 >git remote -v
 > ```
 >`-v` steht vermutlich für "verbose" und sagt einfach: Gib mir alles über das remote Repository, was du weißt.
+
 
 
 
