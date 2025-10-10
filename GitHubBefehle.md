@@ -83,16 +83,18 @@ git pull
 git merge BRANCHNAME
 ```
 >Man wechselt mit `checkout` zurück auf `main`, mit `pull` stellt man sicher, dass `main` mit remote synchronisiert ist. Mit `merge BRANCHNAME` fügt man nun den Branch in `main` ein.<br>
+
 >Sofern keine Merge-Konflikte auftreten, löscht man nach erfolgreicher Eingliederung üblicherweise den Branch, um das Projekt ordentlich zu halten:
 ```bash
 git branch -d BRANCHNAME
 ```
->`-d` steht für "delete".<br>
+>`-d` steht für "delete".
+
 >Sofern der Branch auch auf remote existiert, sollte man ihn auch dort löschen:
 ```bash
 git push origin --delete BRANCHNAME
 ```
->`push` dient nicht nur zum Hochladen von Dateien - hier gibt er lediglich eine Löschanweisung weiter (`delete`). So löscht man den Branch auch auf GitHub.
+>`push` dient nicht nur zum Hochladen von Dateien - hier gibt er lediglich eine Löschanweisung weiter (`delete`). So löscht man den Branch auch auf GitHub - dies ist natürlich nur dann notwendig, wenn der Branch auch hochgeladen wurde, und nicht von vornherein nur lokal existiert hat.
 ___
 ### <i><ins>C.</ins> Navigation und Erstellung/Einrichtung</i>
 
@@ -159,9 +161,10 @@ git clone REPOSITORYLINK
 ```
 > `clone` erstellt ein lokales Repository nach dem Vorbild des remote, z.B. `git clone github.com/user/repository123`<br>
 > Es wird im aktuell geöffneten Ordner ein neuer Ordner mit dem Repository-Namen erstellt.
-> Alternativ kann statt dem Repositorynamen ein Zielordner angegeben werden, der zum Repository gemacht werden soll, z.B. `git clone REPOSITORYLINK NeuesRepository` (alternativ absoluter Pfad C:\...). Falls nicht vorhanden, wird er mit dem angegebenen Namen erstellt.
+> Alternativ kann statt dem Repositorynamen ein Zielordner angegeben werden, der zum Repository gemacht werden soll, z.B. `git clone REPOSITORYLINK NeuesRepository` (alternativ absoluter Pfad C:\...). Falls nicht vorhanden, wird er mit dem angegebenen Namen erstellt.<br>
+> `clone` setzt auch automatisch Upstream und die Verbindung. Von hier an lässt sich ganz normal mit dem remote Repository kommunizieren (*Abschnitt A*).
 
-#### Wenn lokal vorhanden, verbunden und Upstream gesetzt
+#### Wenn lokal vorhanden, verbunden (`remote add origin`) und Upstream gesetzt (`push -u` oder `--set-upstream`)
 ```bash
 git pull
 ```
@@ -176,7 +179,7 @@ git pull
 git fetch origin
 git reset --hard origin/main
 ```
->Mit `fetch origin` den aktuellen Projektstand von GitHub/remote laden. Ohne `origin` würde es auch funktionieren, aber könnte u. U. mehr holen als man möchte, wenn man mit mehreren Remotes verbunden sein sollte.<br>
+>Mit `fetch origin` den aktuellen Projektstand von GitHub/remote laden. <br>
 >Anschließend mit `reset` alle lokalen Dateien durch remote überschreiben lassen. Der aktuelle Bearbeitungsstand geht dabei verloren.
 ___
 ### <i><ins>F.</ins> Verwaltungsbefehle</i>
@@ -231,6 +234,7 @@ rmdir /s /q .git
 >git remote -v
 > ```
 >`-v` steht vermutlich für "verbose" und sagt einfach: Gib mir alles über das remote Repository, was du weißt.
+
 
 
 
